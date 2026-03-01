@@ -1,1 +1,6 @@
-Every day is a change to be a Best
+
+JSON Format 
+{
+    name:"prasath"
+    age : 25
+}
