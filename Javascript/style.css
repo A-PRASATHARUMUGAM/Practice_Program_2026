@@ -6,6 +6,6 @@
 body{
     background-color:#24252a;
     color: white;
-    font-family:sans-serif;
-    font-variant:small-caps; 
+    font-family:monospace;
+     font-size: 10px;
 }
