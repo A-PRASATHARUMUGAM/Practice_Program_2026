@@ -1,0 +1,29 @@
+                                --- MongoDB Data Types ---
+
+
+1. String 
+2. Number 
+3. Floating 
+4. Boolean
+5. new Date() -> Stored Today Date in the UTC Format
+5. Array
+6. Nested Document
+7. Object 
+
+
+db.courses.insertOne(
+    {
+    name:"React",
+    videos:5, 
+    duration:10.3, 
+    completed:false,
+    publicedDate:new Date(),
+    instructors:["Prasath","Kandhan"],
+    relatedCources:
+                {
+                    name:"js",
+                    videos:36,
+                    duration:11
+                }
+    }
+    )
