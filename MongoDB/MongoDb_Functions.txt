@@ -1,0 +1,67 @@
+                        --- MongoDB Functions ---
+1.Find 
+2.Project  / Projection 
+3.sort 
+4.limit functions
+
+
+1. Find 
+
+            --- 1.db.users.find({name:"Kandhan"})  -> Find the specific one 
+
+            {
+            _id: ObjectId('6a22a2e0d9f4555c806744c6'),
+            name: 'Kandhan',
+            Age: 22,
+            Gender: 'Male'
+            }
+
+
+2. Project / Projection 
+ 
+                Ex: db.users.find({Query},{Projection})
+
+            --- 1. db.users.find({name:"Kandhan"},{name:true})   -> It is give exact name only
+
+            {
+            _id: ObjectId('6a22a2e0d9f4555c806744c6'),
+            name: 'Kandhan'
+            }
+
+
+3. Sort  -> Showing the Uppercase first because of ASCII and it Sort the value Ascending and Descending Orders 
+
+
+     - Sort Ascending Order - 
+
+                    --- 1. db.users.find().sort({name:1})     -> Ascending Order Sort 
+
+                    {
+                    _id: ObjectId('6a22a2e0d9f4555c806744c6'),
+                    name: 'Kandhan',
+                    Age: 22,
+                    Gender: 'Male'
+                    }
+                    {
+                    _id: ObjectId('6a22a5fd00104291c513a4ae'),
+                    name: 'Priya',
+                    Age: 22,
+                    Gender: 'Female'
+                    }
+
+    - Sort Descending Order - 
+
+                    --- 2. db.users.find().sort({name:-1})     -> Descending Order Sort 
+
+    - Sort Projection + Ascending Order or Descending Order  - 
+
+                1. db.users.find({name:"Kandhan"},{name:true}).sort(name:1) 
+                2. db.users.find({name:"Kandhan"},{name:true}).sort(name:-1)
+
+
+4. Limit - It is showing the limits of the data 
+
+
+    -- 1. db.users.find().sort({name:1}).limit(2)
+
+
