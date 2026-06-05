@@ -1,4 +1,4 @@
-                                 MongoDB Commands 
+                                MongoDB Commands using Compass
 
 1.Create Data Base 
  
@@ -10,8 +10,21 @@
 
 3. Create Collection 
 
-    - db.createCollection("collectionName")
+    - db.createCollection("collectionName / Table Name")
 
 result = {ok : 1}
 
-4. 
+4. Drop Collection -> Delete CollectionName / Table Name 
+
+  - use NewDataBase 
+  - db.collectionName.drop()
+
+5. Drop DataBase 
+  
+  - use NewDataBase 
+  - db.dropDatabase()
+
+
+                                MongoDB Commands using VS Code 
+
+1. 
