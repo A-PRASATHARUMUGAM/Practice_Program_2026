@@ -1,4 +1,9 @@
-                                MongoDB Commands using Compass
+1. MongoDB Commands using Compass
+2. MongoDB Commands using VS Code - > 1. Install Vs Extension "MongoDB for Vs Code"
+
+
+
+----- 1. MongoDB Commands using Compass ---
 
 1.Create Data Base 
  
@@ -24,7 +29,25 @@ result = {ok : 1}
   - use NewDataBase 
   - db.dropDatabase()
 
+6. Create Document -> It's means create Row  
 
-                                MongoDB Commands using VS Code 
+  1. Insert One Row 
 
-1. Install Vs Extension "MongoDB for Vs Code"
+  - use userdb
+  - db.users.insertOne({name: "Kandhan", Age:"22", Gender:"Male"}) 
+
+  2.Insert Many Row 
+
+  -  db.users.insertMany([{name:"Sabari", Age:"35",Gender:"Male"},{name:"Vignesh", Age:"38",Gender:"Male"}])
+
+
+7. Show the All Data 
+
+  - db.users.find()
+
+8. Insert Documenet Manually -> Using Compass to enter Json Format
+
+
+
+
+
