@@ -1,0 +1,17 @@
+                                 MongoDB Commands 
+
+1.Create Data Base 
+ 
+  - use NewDataBase 
+
+2. Check Avaliable DB
+
+   - show dbs 
+
+3. Create Collection 
+
+    - db.createCollection("collectionName")
+
+result = {ok : 1}
+
+4. 
