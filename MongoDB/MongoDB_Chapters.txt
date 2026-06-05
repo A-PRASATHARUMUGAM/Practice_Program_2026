@@ -1,0 +1,26 @@
+Time Stamps
+0:00:00 - Intro
+0:00:00 - What is MongoDB ?
+0:22:41 - Environment Setup
+0:29:01 - MongoDB Compass
+0:37:10 - VS code setup
+
+0:38:50 - Insert Documents into collection
+0:48:20 - Data Types
+0:57:16 - Find, Project, sort and limit functions
+1:13:15 - Update functions
+1:32:54 - Misc. things
+1:43:41 - Upsert function
+1:47:48 - Delete function
+1:52:55 - Comparison Operators
+2:00:14 - Logical Operators
+2:09:27 - Array functions
+2:18:15 - Aggregation Pipelines
+2:37:24 - Schema Validation
+2:46:15 - Lookup (joins)
+2:56:59 - Indexing
+3:01:34 - MongoDB Atlas
+
+Mongo DB Download Links
+https://www.mongodb.com/try/download/...
+https://www.mongodb.com/try/download/...
