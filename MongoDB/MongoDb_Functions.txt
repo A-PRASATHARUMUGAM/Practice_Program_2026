@@ -2,7 +2,8 @@
 1.Find 
 2.Project  / Projection 
 3.sort 
-4.limit functions
+4.limit function
+5.update function
 
 
 1. Find 
@@ -65,3 +66,57 @@
     -- 1. db.users.find().sort({name:1}).limit(2)
 
 
+
+5. Update Function 
+
+1.updateOne
+    -$set:{} - using the update the value 
+    -$unset:{} - Remove Entire Attribute / Column 
+
+2.updateMany 
+
+
+
+  1.updateOne + $set:{}
+
+  - db.users.updateOne 
+
+  - db.users.updateOne({name:"Priya"},{$set:{name:"Prasath"}})
+
+Result: 
+
+    {
+    acknowledged: true,
+    insertedId: null,
+    matchedCount: 1,
+    modifiedCount: 1,
+    upsertedCount: 0
+    }
+
+  2.update -> Usign ObjectId 
+
+    -db.users.updateOne({_id:ObjectId('6a22a5fd00104291c513a4ae')},{$set:{Age:25}})
+
+
+Result:
+
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+
+  3.updateOne + $unset:{}
+
+    -db.users.updateOne({_id:ObjectId('6a22a5fd00104291c513a4ae')},{$unset:{Age:25}})
+
+
+
+  4.updateMany 
+
+  - db.users.updateMany
+
+  - 
