@@ -1,21 +1,39 @@
                         --- MongoDB Functions ---
-1.Find 
-2.Project  / Projection 
-3.sort 
-4.limit function
-5.update function
+1.Find    -> Find the specific one 
+2.Project  / Projection -> Condition to find which column you want or not 
+3.sort  -> Sort the Data Ascending and Descending Orders 
+4.limit function  -> It is showing the how many data you want so it gives you set limit
+5.update function -> It is Using Name/Id to update the values and 
+    -$set:{} - using to update the value 
+    -$unset:{} - Remove Entire Attribute / Column 
 
 
 1. Find 
 
-            --- 1.db.users.find({name:"Kandhan"})  -> Find the specific one 
+    -find 
+            --- 1.db.users.find({name:"Kandhan"})  -> Find the specific one return all records 
 
+
+      Result:
             {
             _id: ObjectId('6a22a2e0d9f4555c806744c6'),
             name: 'Kandhan',
             Age: 22,
             Gender: 'Male'
             }
+
+    -findOne
+
+            --- 2.db.users.findOne({Age:25})   -> Find the specifice one  return specifice records
+
+      Result: 
+          {
+            _id: ObjectId('6a22a5fd00104291c513a4ae'),
+            name: 'Prasath Arumugam ',
+            Gender: 'Female',
+            completed: false,
+            Age: 25
+          }
 
 
 2. Project / Projection 
@@ -72,6 +90,7 @@
 1.updateOne
     -$set:{} - using the update the value 
     -$unset:{} - Remove Entire Attribute / Column 
+    -$inc:{} - It is increment the value  
 
 2.updateMany 
 
@@ -113,10 +132,18 @@ Result:
 
     -db.users.updateOne({_id:ObjectId('6a22a5fd00104291c513a4ae')},{$unset:{Age:25}})
 
+  4.updateOne + $inc:{}
+    - db.users.updateOne({Age:25},{$inc:{Age:3}})
 
 
-  4.updateMany 
+  5.updateMany 
 
   - db.users.updateMany
 
-  - 
+  - db.users.updateMany({completed:{$exists:false}},{$set{completed:true}})
+
+  - db.users.updateMany({},{$set{completed:false}})
+
+  - db.users.updateMany({name:{$exists:Prasath}},{$set{name:Prasath Arumugam}})
+
+

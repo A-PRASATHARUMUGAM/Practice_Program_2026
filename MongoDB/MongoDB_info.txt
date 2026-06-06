@@ -39,7 +39,7 @@ Differece RDBMS (MySQL)  |   Mongo DB(No Sql)
 6. No Normalization 
 7. Shrading ->  10000 Record to find one the record -> 800 ; Ex: Split 1001 - 2000, 2001 -3000; 
 ( Horizontal Scaling - > Distributeion among Service )
-8.Replication -> It's Create Duplicates because Avoide fault fault tolerance
+8.Replication -> It's Create Duplicates because Avoide fault tolerance
 9.Case Sensitive - prasath and Prasath it two different name 
 
 - Negative Points 
