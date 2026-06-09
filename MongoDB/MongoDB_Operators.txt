@@ -17,6 +17,10 @@
 
 2. Logical Operator 
 
+        - $and
+        - $or 
+        - $not  
+
 
 
 
@@ -97,8 +101,84 @@
 
 2. Logical Operators 
 
-        1.
+        1.$and
+
+            -db.users.find(
+
+                {
+                    $and:[
+                        //Condition 1 
+
+                        {
+                          department:"IT"
+
+                        },
+
+                        //Condition 2
+
+                        {
+                            experience:4
+                        }
+
+                    ]
+                }
+            )
 
 
-        
+        Result: 
 
+            {
+                _id: ObjectId('6a280be53b0ffa8e4027027f'),
+                id: 2,
+                name: 'Priya Sharma',
+                email: 'priya.sharma@example.com',
+                role: 'Backend Developer',
+                department: 'IT',
+                experience: 4
+            }
+            {
+                _id: ObjectId('6a280be53b0ffa8e40270284'),
+                id: 7,
+                name: 'Meena Das',
+                email: 'meena.das@example.com',
+                role: 'Business Analyst',
+                department: 'IT',
+                experience: 4
+            }
+
+
+
+         1.$or
+
+            -db.users.find(
+
+                {
+                    $or:[
+                        //Condition 1 
+
+                        {
+                         role:"Backend Developer"
+
+                        },
+
+                        //Condition 2
+
+                        {
+                            experience:10
+                        }
+
+                    ]
+                }
+            )
+
+        Result: 
+
+            {
+                _id: ObjectId('6a280be53b0ffa8e4027027f'),
+                id: 2,
+                name: 'Priya Sharma',
+                email: 'priya.sharma@example.com',
+                role: 'Backend Developer',
+                department: 'IT',
+                experience: 4
+            }

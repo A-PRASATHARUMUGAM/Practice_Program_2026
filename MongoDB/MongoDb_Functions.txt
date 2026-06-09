@@ -2,7 +2,7 @@
 1.Insert One Row 
 2.Insert Many Row 
 3.Find    -> Find the specific one 
-4.Project  / Projection -> It is "Condition" to find which column you want or not 
+4.Project  / Projection -> Showing Which data you want to showing it called Projection; 
 5.sort  -> Sort the Data Ascending and Descending Orders 
 6.limit Function  -> It is showing the how many data you want so it gives you set limit
 7.update Function -> It is Using Name/Id to update the values and 
