@@ -11,8 +11,11 @@
 
 8.upsert Function - It will check data is exists or not it find anything it will updated it and it will not find anything it will inserted. 
 
-9. Delete Function - 
+9. Delete Function 
+         1.deleteOne  -> It is delete the top first record 
+         2.deleteMany -> It is delete the all record 
 
+10. 
 
 
 
@@ -171,8 +174,33 @@
       - db.users.updateMany({name:{$exists:Prasath}},{$set{name:Prasath Arumugam}})
 
 
-6.upsert function 
+8.upsert Function  
 
       - db.users.updateMany({Gole:"Finished"},{$set:{Gole:"Completed}},{upsert:true})
 
 
+
+9. Delete Function 
+
+      1.deleteOne()
+
+        -db.users.deleteOne({name:"delete1"})
+
+        Result:
+
+            {
+                acknowledged: true,
+                deletedCount: 1
+            }
+
+
+      2.deleteMany()
+
+        -db.users.deleteMany({name:"delete"})
+
+        Result:
+
+              {
+                acknowledged: true,
+                deletedCount: 8
+              }

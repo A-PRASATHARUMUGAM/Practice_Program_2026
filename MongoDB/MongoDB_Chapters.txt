@@ -10,8 +10,8 @@ Time Stamps
 1:13:15 - Update functions
 1:32:54 - Misc. things
 1:43:41 - Upsert function
-
 1:47:48 - Delete function
+
 1:52:55 - Comparison Operators
 2:00:14 - Logical Operators
 2:09:27 - Array functions
