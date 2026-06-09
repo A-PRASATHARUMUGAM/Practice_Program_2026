@@ -1,0 +1,71 @@
+                                        --- MongoDB Operators ---
+1. Comparison Operator 
+
+    - Greater Than 
+        - {$gt: value }  -> It means Greater than 5 
+        - {$gte: value } -> Greater than or Equal to 
+
+    - Lesser Than 
+        - {$lt: value}   -> It means Lesser than 5 
+        - {$lte: value}  -> Lesser than or Equal to     
+
+    - Equal to 
+        - {$eq: value}   -> It means Equal to 
+
+        
+
+2. Logical Operator 
+
+
+
+1. Comparison Operator 
+
+    1.{$gt: value }
+
+            - db.users.find({data:{$gt:2}})
+
+        Result: 
+
+            {
+                _id: ObjectId('6a2802fd91254c6ac7ae9eda'),
+                data: 3
+            }
+            {
+                _id: ObjectId('6a2802fd91254c6ac7ae9eda'),
+                data: 4
+            }
+            {
+                _id: ObjectId('6a2802fd91254c6ac7ae9eda'),
+                data: 5
+            }
+
+    2. {$lt: value}
+
+            - db.users.find({data:{$lt: 4}})
+
+        Result:
+
+            
+            {
+                _id: ObjectId('6a2802fd91254c6ac7ae9eda'),
+                data: 1
+            }
+            {
+                _id: ObjectId('6a2802fd91254c6ac7ae9eda'),
+                data: 2
+            }
+            {
+                _id: ObjectId('6a2802fd91254c6ac7ae9eda'),
+                data: 3
+            }
+
+    3. {$eq: value}
+
+            - db.users.find({data:{$eq:5}})
+
+        Result:
+
+            {
+                _id: ObjectId('6a2802fd91254c6ac7ae9eda'),
+                data: 5
+            }
