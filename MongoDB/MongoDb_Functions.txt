@@ -1,44 +1,70 @@
                         --- MongoDB Functions ---
-1.Find    -> Find the specific one 
-2.Project  / Projection -> Condition to find which column you want or not 
-3.sort  -> Sort the Data Ascending and Descending Orders 
-4.limit function  -> It is showing the how many data you want so it gives you set limit
-5.update function -> It is Using Name/Id to update the values and 
+1.Insert One Row 
+2.Insert Many Row 
+3.Find    -> Find the specific one 
+4.Project  / Projection -> Condition to find which column you want or not 
+5.sort  -> Sort the Data Ascending and Descending Orders 
+6.limit Function  -> It is showing the how many data you want so it gives you set limit
+7.update Function -> It is Using Name/Id to update the values and 
     -$set:{} - using to update the value 
     -$unset:{} - Remove Entire Attribute / Column 
 
+8.upsert Function - It will check data is exists or not it find anything it will updated it and it will not find anything it will inserted. 
 
-1. Find 
-
-    -find 
-            --- 1.db.users.find({name:"Kandhan"})  -> Find the specific one return all records 
+9. Delete Function - 
 
 
-      Result:
-            {
-            _id: ObjectId('6a22a2e0d9f4555c806744c6'),
-            name: 'Kandhan',
-            Age: 22,
-            Gender: 'Male'
-            }
-
-    -findOne
-
-            --- 2.db.users.findOne({Age:25})   -> Find the specifice one  return specifice records
-
-      Result: 
-          {
-            _id: ObjectId('6a22a5fd00104291c513a4ae'),
-            name: 'Prasath Arumugam ',
-            Gender: 'Female',
-            completed: false,
-            Age: 25
-          }
 
 
-2. Project / Projection 
+
+      --- MongoDB Functions Start Here ---
+
+1. Insert One Row 
+
+  - use userdb
+  - db.users.insertOne({name: "Kandhan", Age:"22", Gender:"Male"}) 
+
+
+2.Insert Many Row 
+
+  -  db.users.insertMany([{name:"Sabari", Age:"35",Gender:"Male"},{name:"Vignesh", Age:"38",Gender:"Male"}])
+
+
+3. Show the All Data 
+
+  - db.users.find()
+
+
+      1. find 
+
+                --- 1.db.users.find({name:"Kandhan"})  -> Find the specific one return all records 
+
+
+          Result:
+                {
+                _id: ObjectId('6a22a2e0d9f4555c806744c6'),
+                name: 'Kandhan',
+                Age: 22,
+                Gender: 'Male'
+                }
+
+      2. findOne
+
+                --- 2.db.users.findOne({Age:25})   -> Find the specifice one  return specifice records
+
+          Result: 
+              {
+                _id: ObjectId('6a22a5fd00104291c513a4ae'),
+                name: 'Prasath Arumugam ',
+                Gender: 'Female',
+                completed: false,
+                Age: 25
+              }
+
+
+4. Project / Projection 
  
-                Ex: db.users.find({Query},{Projection})
+            Ex: db.users.find({Query},{Projection})
 
             --- 1. db.users.find({name:"Kandhan"},{name:true})   -> It is give exact name only
 
@@ -48,7 +74,7 @@
             }
 
 
-3. Sort  -> Showing the Uppercase first because of ASCII and it Sort the value Ascending and Descending Orders 
+5. Sort  -> Showing the Uppercase first because of ASCII and it Sort the value Ascending and Descending Orders 
 
 
      - Sort Ascending Order - 
@@ -78,72 +104,75 @@
                 2. db.users.find({name:"Kandhan"},{name:true}).sort(name:-1)
 
 
-4. Limit - It is showing the limits of the data 
+6. Limit - It is showing the limits of the data 
 
 
-    -- 1. db.users.find().sort({name:1}).limit(2)
-
-
-
-5. Update Function 
-
-1.updateOne
-    -$set:{} - using the update the value 
-    -$unset:{} - Remove Entire Attribute / Column 
-    -$inc:{} - It is increment the value  
-
-2.updateMany 
+      -- 1. db.users.find().sort({name:1}).limit(2)
 
 
 
-  1.updateOne + $set:{}
+7. Update Function 
 
-  - db.users.updateOne 
+      1.updateOne
+          -$set:{} - using the update the value 
+          -$unset:{} - Remove Entire Attribute / Column 
+          -$inc:{} - It is increment the value  
 
-  - db.users.updateOne({name:"Priya"},{$set:{name:"Prasath"}})
+      2.updateMany 
 
-Result: 
+        1.updateOne + $set:{}
 
-    {
-    acknowledged: true,
-    insertedId: null,
-    matchedCount: 1,
-    modifiedCount: 1,
-    upsertedCount: 0
-    }
+        - db.users.updateOne 
 
-  2.update -> Usign ObjectId 
+        - db.users.updateOne({name:"Priya"},{$set:{name:"Prasath"}})
 
-    -db.users.updateOne({_id:ObjectId('6a22a5fd00104291c513a4ae')},{$set:{Age:25}})
+      Result: 
 
+          {
+          acknowledged: true,
+          insertedId: null,
+          matchedCount: 1,
+          modifiedCount: 1,
+          upsertedCount: 0
+          }
 
-Result:
+      2.update -> Usign ObjectId 
 
-{
-  acknowledged: true,
-  insertedId: null,
-  matchedCount: 1,
-  modifiedCount: 1,
-  upsertedCount: 0
-}
+        -db.users.updateOne({_id:ObjectId('6a22a5fd00104291c513a4ae')},{$set:{Age:25}})
 
 
-  3.updateOne + $unset:{}
+        Result:
 
-    -db.users.updateOne({_id:ObjectId('6a22a5fd00104291c513a4ae')},{$unset:{Age:25}})
+        {
+          acknowledged: true,
+          insertedId: null,
+          matchedCount: 1,
+          modifiedCount: 1,
+          upsertedCount: 0
+        }
 
-  4.updateOne + $inc:{}
-    - db.users.updateOne({Age:25},{$inc:{Age:3}})
+
+      3.updateOne + $unset:{}
+
+        -db.users.updateOne({_id:ObjectId('6a22a5fd00104291c513a4ae')},{$unset:{Age:25}})
+
+      4.updateOne + $inc:{}
+        - db.users.updateOne({Age:25},{$inc:{Age:3}})
 
 
-  5.updateMany 
+      5.updateMany 
 
-  - db.users.updateMany
+      - db.users.updateMany
 
-  - db.users.updateMany({completed:{$exists:false}},{$set{completed:true}})
+      - db.users.updateMany({completed:{$exists:false}},{$set{completed:true}})
 
-  - db.users.updateMany({},{$set{completed:false}})
+      - db.users.updateMany({},{$set{completed:false}})
 
-  - db.users.updateMany({name:{$exists:Prasath}},{$set{name:Prasath Arumugam}})
+      - db.users.updateMany({name:{$exists:Prasath}},{$set{name:Prasath Arumugam}})
+
+
+6.upsert function 
+
+      - db.users.updateMany({Gole:"Finished"},{$set:{Gole:"Completed}},{upsert:true})
 
 
