@@ -12,11 +12,15 @@
     - Equal to 
         - {$eq: value}   -> It means Equal to 
 
-        
+    - Fine the Specifice one 
+        -{$in: value}   -> It is what you give return give that 
 
 2. Logical Operator 
 
 
+
+
+--- Operators Start Here ---
 
 1. Comparison Operator 
 
@@ -69,3 +73,32 @@
                 _id: ObjectId('6a2802fd91254c6ac7ae9eda'),
                 data: 5
             }
+
+    4. {$in: value}
+
+            - db.users.find({name:{$in:["delete1","delete2","delete3"]}})    
+
+        Result: 
+
+            {
+            _id: ObjectId('6a27febe91254c6ac7ae9ed2'),
+            name: 'delete1',
+            }
+            {
+            _id: ObjectId('6a27febe91254c6ac7ae9ed3'),
+            name: 'delete2',
+   
+            }
+            {
+            _id: ObjectId('6a27febe91254c6ac7ae9ed4'),
+            name: 'delete3',
+            }
+
+
+2. Logical Operators 
+
+        1.
+
+
+        
+

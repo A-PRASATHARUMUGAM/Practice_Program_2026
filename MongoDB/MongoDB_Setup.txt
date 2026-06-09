@@ -1,0 +1,58 @@
+Step 1: Download MongoDB Community Server
+- Visit https://www.mongodb.com/try/download/community
+- Select your OS and download the installer
+
+Step 2: Install MongoDB
+- Run the installer and follow the setup wizard
+- Choose "Install MongoDB as a Service" (recommended)
+- Accept the default installation path
+
+Step 3: Install MongoDB Compass (Optional)
+- Compass is included in the installer
+- Launch MongoDB Compass to manage databases visually
+
+Step 4: Verify Installation
+- Open Command Prompt/Terminal
+- Run: mongod --version
+- Should display the MongoDB version number
+
+Step 5: Start MongoDB Service
+- Windows: Start the MongoDB service from Services
+- macOS/Linux: Run: brew services start mongodb-community
+- Or run: mongod to start the server manually
+
+Step 6: Connect to MongoDB
+- Open another terminal and run: mongosh
+- Or use MongoDB Compass GUI to connect
+
+Setup Complete!
+
+
+How to install CLI Method MongoDB
+
+Step 1: Install via Package Manager
+- Windows (Chocolatey): choco install mongodb
+- macOS (Homebrew): brew tap mongodb/brew && brew install mongodb-community
+- Linux (Ubuntu): sudo apt-get install mongodb
+
+Step 2: Add MongoDB to the PATH environment variable
+- Windows:
+  1. Open System Properties > Advanced > Environment Variables
+  2. Under System variables, select Path and click Edit
+  3. Add the MongoDB bin folder, e.g. C:\Program Files\MongoDB\Server\<version>\bin
+  4. Click OK and restart Command Prompt
+- macOS/Linux: typically installed binaries are already in PATH; if not, add the MongoDB bin folder to ~/.bashrc, ~/.zshrc, or ~/.profile
+
+Step 3: Verify Installation
+- Run: mongod --version
+- Run: mongosh --version
+
+Step 4: Start MongoDB Service
+- Windows: net start MongoDB
+- macOS: brew services start mongodb-community
+- Linux: sudo systemctl start mongod
+
+Step 5: Connect to MongoDB
+- Run: mongosh
+
+CLI Installation Complete!  
