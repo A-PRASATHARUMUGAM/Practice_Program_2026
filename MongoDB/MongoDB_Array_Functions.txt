@@ -1,0 +1,102 @@
+                        -- MongoDB Array functions --
+
+1.push -> It is add value into arry but "If already exisits but it will added duplicate value instead use "addtoset" "
+2.addToSet -> "It is add the unique values only" If already exisits value is not add.  
+3.pull -> It is remove the values 
+4.pop -> It is remove based on value  " -1 " remove form end or " 1 " remove from start 
+
+
+1.push 
+
+     - db.arr.updateOne(
+
+        {age:35},{$push:[child:{"Kandhan"}]}
+
+        )
+
+    Result:
+
+        {
+            _id: ObjectId('6a28f44291254c6ac7ae9ee6'),
+            name: 'Vignesh',
+            age: 35,
+            child: [
+                'Deepbak',
+                'Kandhan'
+            ]
+        }
+
+
+2. addToSet
+
+        - db.arr.updateOne(
+            {age:35},{$addToSet:{child:"Kandhan"}}    
+        )
+
+
+        //It already have in that array so it can't modified 
+
+        Result: 
+
+            {
+                acknowledged: true,
+                insertedId: null,
+                matchedCount: 1,
+                modifiedCount: 0,
+                upsertedCount: 0
+            }
+
+
+3. pull
+
+        - db.arr.updateOne(
+            {age:35},{$pull:{child:"Kandhan"}}
+        )
+
+
+        Result:
+
+            {
+                acknowledged: true,
+                insertedId: null,
+                matchedCount: 1,
+                modifiedCount: 1,
+                upsertedCount: 0
+            }
+
+            {
+            _id: ObjectId('6a28f99591254c6ac7ae9ee7'),
+            name: 'Vignesh',
+            age: 35,
+            gender: 'Male',
+            child: []
+            }
+
+
+4. pop 
+
+        -db.arr.updateOne(
+            {age:35},{$pop:{child:1}}     // 1 value removed from start | -1 value removed from end
+        )
+
+
+    Result:
+
+        {
+            acknowledged: true,
+            insertedId: null,
+            matchedCount: 1,
+            modifiedCount: 1,
+            upsertedCount: 0
+        }
+
+        {
+            _id: ObjectId('6a28f99591254c6ac7ae9ee7'),
+            name: 'Vignesh',
+            age: 35,
+            gender: 'Male',
+            child: [
+                'Kandhan',
+                'Prasath'
+            ]
+        }

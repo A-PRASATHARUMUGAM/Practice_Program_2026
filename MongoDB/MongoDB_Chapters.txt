@@ -12,10 +12,9 @@ Time Stamps
 1:43:41 - Upsert function
 1:47:48 - Delete function
 1:52:55 - Comparison Operators
-
 2:00:14 - Logical Operators
-
 2:09:27 - Array functions
+ 
 2:18:15 - Aggregation Pipelines
 2:37:24 - Schema Validation
 2:46:15 - Lookup (joins)
