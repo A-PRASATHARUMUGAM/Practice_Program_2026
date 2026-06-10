@@ -1,0 +1,15 @@
+
+                -- MongoDB_Indexing --
+
+1. Indexing
+
+        -db.courses.getIndexes()
+
+            [
+
+                {v:2, key:{_id:1}, name:"_id_"},  -> It is default  
+                {v:2, key:{name:1}, name:"name_1"},  -> 
+                {v:2, key:{name:1 duration:-1}, name: "name_1_duration_-1"}
+
+            ]
+
