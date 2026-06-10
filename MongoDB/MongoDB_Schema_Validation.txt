@@ -1,0 +1,7 @@
+                        -- MongoDB Schema Validation --
+
+
+//This is kind of relationship 
+
+1. Schema Validation
+2. Lookup (joins)

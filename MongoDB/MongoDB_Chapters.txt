@@ -16,10 +16,11 @@ Time Stamps
 2:09:27 - Array functions
 2:18:15 - Skip function 
 2:18:15 - Aggregation Pipelines
-
 2:37:24 - Schema Validation
 2:46:15 - Lookup (joins)
+
 2:56:59 - Indexing
+
 3:01:34 - MongoDB Atlas
 
 Final Reversion Everything then Move on
