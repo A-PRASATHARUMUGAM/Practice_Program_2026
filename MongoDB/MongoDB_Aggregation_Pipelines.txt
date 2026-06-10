@@ -1,0 +1,139 @@
+                         -- MongoDB Aggregation Pipelines--
+
+
+1.skip Function  -> It is skip the record like Ex: Pagination 
+
+2.aggregate()
+    -$match     -> If any match it will return 
+    -$group     -> Group the values 
+    -$sum       -> Sum the value 
+    -$max       -> It is choose the hight value (500 + 50 + 100 = 650)  max = 500 | sum =650 
+    -$avg       -> It is give the Average Value 
+    -$out       -> Overall data store to specific name 
+    -$count     -> It is return the count of the value 
+
+
+1.skip () 
+
+        - db.users.find().limit(2)
+
+    Result:
+            {
+            _id: ObjectId('6a27febe91254c6ac7ae9ed2'),
+            name: 'delete1',
+            data: 'Core1'
+            }
+            {
+            _id: ObjectId('6a27febe91254c6ac7ae9ed3'),
+            name: 'delete2',
+            data: 'Core2'
+            }
+
+
+    //In this Place Implemented 
+
+        - db.users.find().skip(2).limit(2)
+
+    Result:
+
+        {
+        _id: ObjectId('6a27febe91254c6ac7ae9ed4'),
+        name: 'delete3',
+        data: 'Core3'
+        }
+
+        {
+        _id: ObjectId('6a27febe91254c6ac7ae9ed5'),
+        name: 'delete4',
+        data: 'Core4'
+        }
+
+
+
+
+2.aggregate()
+
+    1. $match 
+
+       - db.users.aggregate([
+            {$match:{experience:4}},
+            {$sort:{id:-1}},
+            {$limit:2}
+        ])
+
+
+    Result:
+
+        {
+        _id: ObjectId('6a280be53b0ffa8e40270286'),
+        id: 9,
+        name: 'Divya Nair',
+        email: 'divya.nair@example.com',
+        role: 'Project Manager',
+        department: 'IT',
+        experience: 4
+        }
+
+        {
+        _id: ObjectId('6a280be53b0ffa8e40270284'),
+        id: 7,
+        name: 'Meena Das',
+        email: 'meena.das@example.com',
+        role: 'Business Analyst',
+        department: 'IT',
+        experience: 4
+        }
+
+
+    2.$group and $sum 
+
+
+        - db.customer.aggregate([
+            {$group:{_id:"$name",total:{$sum:"$amount"}}}
+        ])
+
+
+    Result:
+
+        {
+            _id: 'Prasath',
+            total: 100
+        }   
+        {
+            _id: 'Vignesh',
+            total: 550
+        }
+        {
+            _id: 'Sabari',
+            total: 1500
+        }
+        {
+        _id: 'Kandhan',
+        total: 110
+        }
+
+    3.$max 
+
+        - db.customer.aggregate([
+            {$group:{_id:"$name",MaxPurchase:{$max:{$amount}}}}
+            
+        ])
+
+        Result: 
+
+            {
+                _id: 'Kandhan',
+                MaxPurchase: 100
+            }
+            {
+                _id: 'Prasath',
+                MaxPurchase: 50
+            }
+            {
+                _id: 'Vignesh',
+                MaxPurchase: 500
+            }
+            {
+                _id: 'Sabari',
+                MaxPurchase: 1000
+            }
