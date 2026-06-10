@@ -1,3 +1,5 @@
+----------------------- MongoDB Install Process --------------------------------------
+
 Step 1: Download MongoDB Community Server
 - Visit https://www.mongodb.com/try/download/community
 - Select your OS and download the installer
@@ -7,7 +9,7 @@ Step 2: Install MongoDB
 - Choose "Install MongoDB as a Service" (recommended)
 - Accept the default installation path
 
-Step 3: Install MongoDB Compass (Optional)
+Step 3: Install MongoDB Compass (Optional)  
 - Compass is included in the installer
 - Launch MongoDB Compass to manage databases visually
 
@@ -28,7 +30,7 @@ Step 6: Connect to MongoDB
 Setup Complete!
 
 
-How to install CLI Method MongoDB
+--------------------  How to install CLI Method MongoDB   -----------------------------
 
 Step 1: Install via Package Manager
 - Windows (Chocolatey): choco install mongodb
@@ -56,3 +58,10 @@ Step 5: Connect to MongoDB
 - Run: mongosh
 
 CLI Installation Complete!  
+
+
+
+----------------------------- How to use MongoDB Atlas -------------------------
+
+
+1. MongoDB Atlas -> It is online server create Atlas to connect the compass in local and the changes will to reflected to Live 
