@@ -16,7 +16,7 @@ console.log(rand2);
 console.log(rand3);  
 
 // ARRAY
-let name = ["prasath", "vignesh", "Sabari","Kandhan"];
+let name = ["prasath", "vignesh", "Sabari","Kandhan"]; 
 
 let result = Math.floor(Math.random()*(3 - 0 + 1)) + 0;
 
@@ -69,8 +69,14 @@ console.log("Last Element in the Array",name.length-1);
 
 //4.unshift -Add the element from start of the array and returns new length 
 
+// 5.delete() -> Deleted the value = "Empty the value is means undefined"
 
-   
+
+//Insert/Delete/Replace ->splice 
+//6.splice() -> Deletes 2 elements starting at index  splice(Index Value, Delete Count, Replace Count)
+
+//7. 
+    
 console.log(typeof [].map);      // function
 console.log(typeof "".map);    // undefined
                  

@@ -1,0 +1,42 @@
+00:00:00 - Prerequisite and Intro
+00:04:23 - Installing VS code and getting started
+00:09:53 - Variables  
+00:17:07 - External js
+00:18:25 - Operators
+00:42:05 - prompt
+00:45:52 - DOM
+00:50:00 - Length Converter
+01:05:10 - Math object
+01:09:12 - String
+01:19:12 - Template literals
+
+01:23:19 - Arrays
+01:27:28 - 2d array 
+01:29:14 - Array Methods
+01:42:27 - If else
+01:49:42 - FD interest rate calculator
+02:00:00 - Switch
+02:01:21 - CityStats tool
+02:03:44 - Event Listener
+02:21:03 - Objects
+02:32:07 - Loops
+02:51:05 - Color Flipper
+03:04:28 - Function types
+03:24:54 - Callback
+03:30:04 - ForEach
+03:38:58 - Map,Filter Reduce
+03:56:57 - Returning Functions and Closure
+04:08:43 - Memory Allocation
+04:15:45 - Set and Map
+04:24:17 - Solving Leetcode Questions
+05:28:09 - Object Oriented Programming
+06:09:55 - Asynchronous Javascript
+06:29:26 - Digital Clock
+06:40:30 - Promise
+07:02:45 - Error Handling
+07:07:48 - Async and Await
+07:15:21 - JSON
+07:21:04 - Fetch API
+07:36:47 - Currency Converter
+07:59:03 - Todo List
+08:10:36 - Using Local Storage
