@@ -48,7 +48,9 @@ for(let i=10; i>=1; i--){
 /*
 
 1.Function Declaration 
-2.
+2.Variable Function or Function Expression 
+3.Arrow Function 
+4. 
 
 
 */
@@ -57,6 +59,8 @@ for(let i=10; i>=1; i--){
 
 // let positiveValue= prompt("Enter the number");
 
+
+// console.log(isPositive(positiveValue));  //Hoisting 
 
 function isPositive(num){
 
@@ -69,6 +73,51 @@ function isPositive(num){
 
 }
 
-// console.log(isPositive(positiveValue));
 
-//
+//2. Function Expression / Variable Function 
+
+
+let ReturnName = function (fname){
+
+        return fname
+
+}
+
+console.log(ReturnName("Prasath"));
+
+
+// 3.Arrow Function 
+
+
+let arrowFunction = (data)=>{
+ 
+   return data 
+
+}
+
+console.log(arrowFunction("Kandhan"));
+
+
+
+// Spread Operators / rest parameters  (...args) -> It is getting the unlimited values after you loop to get the values 
+// instead using argument also it is also store argument values
+
+let arr=[1,2,3,4,5,6,7,8]
+
+
+let filterValue= (...args)=>{
+
+    for(let val of args){
+        return val
+    }
+}
+
+
+console.log(filterValue(arr))
+
+
+
+//Generator -> It's Generate Value one by one 1 to infinity 
+//Callback  -> Function passing as a arugement "Best Example forEach()"
+
+
