@@ -147,3 +147,67 @@ setTimeout(()=>console.log("Step 3"),1000)
 console.log("Step 5")
 
 // setInterval(()=>console.log("Hello Prasath"),2000);
+
+
+
+
+//Method 1 - Promise 
+const tatkalBook = new Promise((resolve,reject)=>{
+
+    let bookingSuccess = true;
+
+    if(bookingSuccess){
+        resolve()  //then - success 
+    }else{
+        reject()   //catch  -failure 
+    } 
+
+
+})
+
+
+// This place to calling the promise 
+tatkalBook.then(success)
+.catch(failure)
+
+
+function success(){
+    console.log("Booked Successfully");
+
+}
+
+function failure(){
+
+    console.log("Booking Failed");
+
+}
+
+
+//Method 2 - Promise 
+
+function ticket(){
+
+    return new Promise((res,rej)=>{
+        let condition = false 
+
+        if(condition){
+
+            res(50)
+        }else{
+            rej(0)
+        }
+
+    })
+}
+
+ticket().then((amt)=>{console.log(`I got ₹ ${amt}`)})
+.catch((amt)=>{console.log(`I don't have Money ₹ ${amt}`)})
+
+//Promise functions
+
+/*
+1. Promise.all();
+2. Promise.allSettled()
+3. Promise.any()
+4. Promise.race()
+*/
