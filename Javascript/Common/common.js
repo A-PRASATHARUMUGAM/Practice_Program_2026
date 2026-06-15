@@ -237,3 +237,39 @@ finally{
 
     console.log("Success Fully Execute ")
 }
+
+
+
+// Asyn and await 
+
+// async - always return promise 
+// await - It is only valid in async function 
+
+
+function data(){
+
+    return new Promise((resolve,reject)=>{
+        let data=false 
+        if(data){
+            resolve("Data Received")
+        }else{
+            reject("Data is not Received")
+        }
+
+
+    }) 
+}
+
+async function asyncstatus(){
+    console.log("Hello");
+    try{
+        let res=await data()
+         console.log(res);
+    }
+    catch(error){
+        console.log(error);
+    }
+}
+
+asyncstatus()
+ 
