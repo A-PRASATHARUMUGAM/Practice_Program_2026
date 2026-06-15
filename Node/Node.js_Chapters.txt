@@ -13,8 +13,8 @@ Chapters:
 0:00:12 - Prerequisites
 0:01:48 - What is Node.js ?
 0:20:16 - Environment Setup 
-
 0:29:49 - Global Object
+
 0:39:03 - Modules and Require
 1:00:02 - File System
 1:26:28 - Streams and Buffers
