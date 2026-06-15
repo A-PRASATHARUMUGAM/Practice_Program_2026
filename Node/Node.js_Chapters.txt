@@ -14,10 +14,9 @@ Chapters:
 0:01:48 - What is Node.js ?
 0:20:16 - Environment Setup 
 0:29:49 - Global Object
-
 0:39:03 - Modules and Require
-
 1:00:02 - File System
+
 1:26:28 - Streams and Buffers
 1:46:17 - Client & Server
 2:03:57 - Request & Response
@@ -39,6 +38,7 @@ Chapters:
 7:05:42 - Mongoose
 7:36:52 - Password Encryption
 7:51:12 - OAuth 2.0 (Google Login)
+
 
 
 ---- General Topic ----
