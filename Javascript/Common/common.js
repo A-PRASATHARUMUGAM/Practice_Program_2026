@@ -129,3 +129,21 @@ console.log(filterValue(arr))
 funct.arrowfunction()
 funct.variablefunction()
 funct.normalfunction()
+
+
+//Synchronous and Asynchronous
+
+
+// Synchronous - It is blocking 
+// Asynchronous - It is not blocking 
+
+
+// Call Stack - > Browser -> Call Back Queue - > Event Loop -> Call Stack 
+
+setTimeout(()=>console.log("Step 1"),4000)
+setTimeout(()=>console.log("Step 2"),2000)
+setTimeout(()=>console.log("Step 3"),1000)
+
+console.log("Step 5")
+
+// setInterval(()=>console.log("Hello Prasath"),2000);
