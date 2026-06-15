@@ -1,4 +1,6 @@
                                         //Object
+import funct from './common2.js';
+
 
 // Object Creating 1 
 let item={
@@ -121,3 +123,9 @@ console.log(filterValue(arr))
 //Callback  -> Function passing as a arugement "Best Example forEach()"
 
 
+
+// ES6 Modules 
+
+funct.arrowfunction()
+funct.variablefunction()
+funct.normalfunction()

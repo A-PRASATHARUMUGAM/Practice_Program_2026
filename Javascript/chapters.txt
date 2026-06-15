@@ -41,6 +41,7 @@
 04:24:17 - Solving Leetcode Questions
 
 05:28:09 - Object Oriented Programming**
+06:05:00 - ES6 Modules 
 06:09:55 - Asynchronous Javascript**
 
 06:29:26 - Digital Clock
