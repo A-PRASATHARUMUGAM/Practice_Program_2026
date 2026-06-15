@@ -1,9 +1,19 @@
+Pre Requirements 
+1. HTML *
+2. CSS *
+3. JavaScript *
+4. Tailwind / Bootstrap 
+5. React.js 
+6. MongoDB
+
 --- Current Learning Topic ---
+
 Chapters:
 0:00:00 - Introduction
 0:00:12 - Prerequisites
 0:01:48 - What is Node.js ?
 0:20:16 - Environment Setup 
+
 0:29:49 - Global Object
 0:39:03 - Modules and Require
 1:00:02 - File System

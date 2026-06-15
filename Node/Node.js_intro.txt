@@ -1,0 +1,10 @@
+Node.js 
+
+1. Read / Write Files 
+2. Connect with DB 
+3. Act Like a Server    
+
+Advantage 
+    1. 3rd Party Library | Packages 
+    2. Same Language Frontend and Backend 
+     
