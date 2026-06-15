@@ -48,6 +48,7 @@
 
 06:40:30 - Promise**
 07:02:45 - Error Handling*
+
 07:07:48 - Async and Await **
 07:15:21 - JSON**
 07:21:04 - Fetch API**

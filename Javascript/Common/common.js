@@ -211,3 +211,29 @@ ticket().then((amt)=>{console.log(`I got ₹ ${amt}`)})
 3. Promise.any()
 4. Promise.race()
 */
+
+
+
+
+
+// Error Handling 
+
+try{
+
+    // let num=prompt("Enter a new number");
+    if(isNaN(num)){
+        throw "Enter the Valid Number"
+    }else{
+        console.log("It is your number ",num);
+    }
+
+}
+catch(error){
+
+    console.log(error);
+    
+}
+finally{
+
+    console.log("Success Fully Execute ")
+}
