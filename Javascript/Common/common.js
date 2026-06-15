@@ -273,3 +273,16 @@ async function asyncstatus(){
 
 asyncstatus()
  
+
+//JSON - JavaScript Object Notation 
+//API - Applicaiton Programming Interface 
+
+
+// GET  Request 
+let posts=fetch("https://jsonplaceholder.typicode.com/posts")
+.then(res => res.json())
+.then(msg=>console.log(msg[1]))
+.catch((error)=>console.log(error))
+
+// POST Request 
+ 
