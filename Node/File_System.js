@@ -8,7 +8,6 @@
 5.fs.readFile()    - It is read the file 
 6.fs.unlink()      - It is delete the file 
 7.rmdir()          - It is delete the folder and can only delete an ! empty directory.
-8.
 
 */
 

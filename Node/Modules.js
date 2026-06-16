@@ -9,5 +9,21 @@ const  os = require('os')
 // console.log(data.ages)
 
 
+// C:\Users\Prasath Arumugam
+console.log(os.homedir()); //-> It is return the Home Directory 
 
-console.log(os.homedir());
+
+
+//1
+// console.log(names);
+
+
+//2
+// module.exports = names
+
+
+//3
+// module.exports = {
+//   names,
+//   ages
+// }
