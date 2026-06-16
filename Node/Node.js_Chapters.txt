@@ -16,11 +16,11 @@ Chapters:
 0:29:49 - Global Object
 0:39:03 - Modules and Require
 1:00:02 - File System
-
 1:26:28 - Streams and Buffers
+------------------------------
 1:46:17 - Client & Server
-2:03:57 - Request & Response
-2:17:40 - HTML Response & Status Code
+2:03:57 - Request & Response 
+2:17:40 - HTML Response & Status Code 
 2:45:09 - NPM & Dependencies
 3:03:52 - Express Apps
 3:20:27 - Middlewares
