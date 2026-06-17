@@ -27,18 +27,76 @@ const server=http.createServer((req,res)=>{
 
 
     //-- Reading the HTML file and Retrun Response HTML file
-    res.setHeader('Content-Type','text/plain');
-    fs.readFile("./docs/index.html",(err,data)=>{
+    // res.setHeader('Content-Type','text/plain');
+    // fs.readFile("./docs/index.html",(err,data)=>{
 
-        if(err){
-            console.log(err.message);
-            res.end
-        }else{
-            res.end(data)
-        }
+    //     if(err){
+    //         console.log(err.message);
+    //         res.end
+    //     }else{
+    //         // Type 1 for one value 
+    //         // res.end(data)
+
+    //         // Type 2 
+    //         res.write(data);
+    //         res.end(data);
+    //     }
         
  
-    })
+    // })
+
+
+    //-- Request URL To Send the page 
+    res.setHeader('Content-Type', 'text/html')
+
+    const reqdata= req.url;
+
+    if(reqdata==="/about"){
+
+        fs.readFile("./docs/about.html",(err,data)=>{
+            if(err){
+                console.log(err.message)
+                res.end()
+            }else{
+                res.statusCode =201; 
+                res.write(data);
+                res.end();
+                
+            }
+
+        })
+
+    } else if(reqdata==="/service"){
+
+        fs.readFile("./docs/service.html",(err,data)=>{
+            if(err){
+                console.log(err.message)
+                res.end()
+            }else{
+
+                res.write(data);
+                res.end();
+                
+            }
+
+        });
+
+    }else if (reqdata=="/home"){
+        res.statusCode = 301
+        res.setHeader('Location','/')
+        res.end()
+    
+
+
+    }
+    else{
+        res.statusCode = 404;
+        res.write("Page Not Found");
+        res.end()
+    }
+    
+    
+
 
 })
 
