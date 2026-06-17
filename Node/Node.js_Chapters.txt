@@ -21,8 +21,9 @@ Chapters:
 1:46:17 - Client & Server
 2:03:57 - Request & Response 
 2:17:40 - HTML Response & Status Code 
-------------------------------
-2:45:09 - NPM & Dependencies
+-----------------------------
+2:45:09 - NPM & Dependencies -Ex:Live Server
+-----------------------------
 3:03:52 - Express Apps
 3:20:27 - Middlewares
 3:40:19 - Route Params

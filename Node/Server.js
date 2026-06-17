@@ -51,7 +51,7 @@ const server=http.createServer((req,res)=>{
 
     const reqdata= req.url;
 
-    if(reqdata==="/about"){
+    if(reqdata==="/aboutservice"){
 
         fs.readFile("./docs/about.html",(err,data)=>{
             if(err){
