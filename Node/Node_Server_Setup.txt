@@ -1,6 +1,14 @@
 
-
+ --- NPM Require Dependencies ---
 
 1. nodemon - nodemon is a tool that helps develop Node.js based applications by automatically restarting the node application when file changes in the directory are detected.
 2. lodash  -  It is create a package.json and Dependencies
-3. 
+
+
+//Setup 
+
+1. Install Express - npm install Express
+2. Create file App.js > 
+        - const exc = require('express')
+        - const app= express() 
+        - app.listen(3000)
