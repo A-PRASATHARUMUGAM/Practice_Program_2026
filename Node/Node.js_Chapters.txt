@@ -26,6 +26,7 @@ Chapters:
 -----------------------------
 3:03:52 - Express Apps
 3:20:27 - Middlewares
+
 3:40:19 - Route Params
 4:05:12 - Query Params
 4:22:36 - Post Request
