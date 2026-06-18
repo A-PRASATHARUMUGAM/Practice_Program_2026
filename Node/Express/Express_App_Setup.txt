@@ -1,0 +1,7 @@
+Route Parameters
+
+
+
+1. npm init -y  -> It is give the package.json File 
+2. 
+

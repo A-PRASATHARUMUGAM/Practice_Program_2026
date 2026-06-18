@@ -42,8 +42,6 @@ Chapters:
 7:36:52 - Password Encryption
 7:51:12 - OAuth 2.0 (Google Login)
 
-
-
 ---- General Topic ----
 
 1. Node.js Introduction
