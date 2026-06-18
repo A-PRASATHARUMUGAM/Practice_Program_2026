@@ -17,17 +17,17 @@ Chapters:
 0:39:03 - Modules and Require
 1:00:02 - File System
 1:26:28 - Streams and Buffers
-------------------------------
+-----------IM------------------
 1:46:17 - Client & Server
 2:03:57 - Request & Response 
 2:17:40 - HTML Response & Status Code 
 -----------------------------
 2:45:09 - NPM & Dependencies -Ex:Live Server
------------------------------
+-----------IM------------------
 3:03:52 - Express Apps
 3:20:27 - Middlewares
-
 3:40:19 - Route Params
+
 4:05:12 - Query Params
 4:22:36 - Post Request
 4:38:37 - Put Request
