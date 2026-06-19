@@ -27,10 +27,10 @@ app.get("/", (req,res)=>{
 
 // User Data 
 const users=[
-    {id:1,name:"Prasath",age:22},
-    {id:2,name:"Vignesh",age:35},
-    {id:3,name:"Sabari",age:33},
-    {id:4,name:"Kandhan",age:22}
+    {id:1,name:"Prasath"},
+    {id:2,name:"Vignesh"},
+    {id:3,name:"Sabari"},
+    {id:4,name:"Kandhan"}
 ]
 
 
@@ -41,7 +41,7 @@ app.get("/api/users",(req,res)=>{
 
 })
 
-//Get ID to Users 
+//Get ID to Users and Route Params 
 app.get("/api/users/:id",(req,res)=>{
 
     const id=parseInt(req.params.id)
@@ -61,5 +61,26 @@ app.get("/api/users/:id",(req,res)=>{
         res.status(404).send({msg: "User is not found"});
     }
     
+    
+})
+
+
+// ---- Query Params ----  
+
+
+//localhost:3000/data?filter=name&age=22
+
+
+app.get("/api/data",(req,res)=>{
+
+        // console.log(req.query);
+        // [Object: null prototype] { filter: 'user_name', value: 'true' }
+
+    //Object Destructuring
+    let {query:{filter,value}}=req;
+
+    console.log(filter,value);
+
+    res.send(users.filter(((user)=>user[filter].toLowerCase().includes(value))));
     
 })
