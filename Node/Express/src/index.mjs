@@ -104,7 +104,7 @@ app.get("/api/products",(req,res)=>{
 })
 
 
-// Post Requets 
+// Post Requets - Json convert middleware is required 
 
 //1. Thunder Client instead using Postman it is VS Code Extension 
 
@@ -174,5 +174,29 @@ app.patch("/api/users/:id",(req,res)=> {
 
 
 
+// Delete Request 
+
+
+app.delete("/api/users/:id",(req,res)=>{
+
+    const userId=parseInt(req.params.id);
+
+    if(isNaN(userId)){
+
+        res.status(400).send("Bad Request")
+
+    }
+    const userIndex=users.findIndex((user)=>user.id === userId);
+
+     if(userIndex === -1){
+            return res.status(404).send({msg:"User is not Found"})
+        }
+
+    users.splice(userIndex,1);
+    res.sendStatus(200)
+
+
+
+})
 
 

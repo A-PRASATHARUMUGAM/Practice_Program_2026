@@ -32,8 +32,8 @@ Chapters:
 -----------REV------------------  
 4:22:36 - Post Request
 4:38:37 - Put Request
-
 4:52:34 - Patch & Delete Request
+--------------------------------
 
 5:03:41 - getById Middleware II
 5:19:37 - Validation
