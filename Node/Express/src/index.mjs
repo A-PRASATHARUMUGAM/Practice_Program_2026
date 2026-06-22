@@ -110,7 +110,7 @@ app.get("/api/products",(req,res)=>{
 
 
 app.post("/api/users",(req,res)=>{
-
+ 
     // console.log(req.body);
     // users.push(req.body)
     // res.status(201).send(users); 
@@ -121,5 +121,32 @@ app.post("/api/users",(req,res)=>{
        res.status(200).send(users);
        
 });
+
+
+
+//Put Request - It is update the value 
+
+app.put("/api/users/:id",(req,res)=>{
+
+        const userId=parseInt(req.params.id);
+
+        if(isNaN(userId)){
+            res.status(400).send("Bad Request")
+        }
+
+        const userIndex=users.findIndex((user)=>user.id === userId);
+
+        if(userIndex === -1){
+            return res.status(404).send({msg:"User is not Found"})
+        }
+
+        const {body} =req;
+        users[userIndex]= {id:userId,...body};
+        
+        return res.status(200).send({msg:"User Updated"})
+ 
+});
+
+
 
 
