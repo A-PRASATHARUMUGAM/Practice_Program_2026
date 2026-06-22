@@ -149,4 +149,30 @@ app.put("/api/users/:id",(req,res)=>{
 
 
 
+// Patch Request - You can update specifce one 
+
+app.patch("/api/users/:id",(req,res)=> {
+
+      const userId=parseInt(req.params.id);
+
+        if(isNaN(userId)){
+            res.status(400).send("Bad Request")
+        }
+
+        const userIndex=users.findIndex((user)=>user.id === userId);
+
+        if(userIndex === -1){
+            return res.status(404).send({msg:"User is not Found"})
+        }
+
+        const {body} =req;
+        users[userIndex]={ ...users[userIndex],...body}
+
+        return res.sendStatus(200)
+          
+})
+
+
+
+
 
