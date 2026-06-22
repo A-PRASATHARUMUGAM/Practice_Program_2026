@@ -1,7 +1,7 @@
 /*
 1. get - It is get method  
 2. use - It is using for 404 Response you can't found any route at time using to retun 
-3. Middlware -  Browser -> Request -> Server(Middleware) -> Response -> Browser
+3. Middleware -  Browser -> Request -> Server(Middleware) -> Response -> Browser
 4. 
 
 */ 
@@ -46,8 +46,6 @@ app.get("/join",(req,res)=>{
 app.use((req,res)=>{
     res.status(404).sendFile('./docs/NotFound.html',{root:__dirname});
 })
-
-
 
 
 // { root: 'D:\\Program\\Practice_Program_2026\\Node' }

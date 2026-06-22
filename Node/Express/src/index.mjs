@@ -11,6 +11,11 @@ app.listen(PORT,()=>{
     console.log(`App is Running on Port ${PORT}`);
 });
 
+
+
+// Middelware -> Incomeing request automatically to json type 
+
+app.use(express.json());
  
 //Inside using callback name is request handler 
 
@@ -70,7 +75,6 @@ app.get("/api/users/:id",(req,res)=>{
 
 //localhost:3000/data?filter=name&age=22
 
-
 app.get("/api/data",(req,res)=>{
 
         // console.log(req.query);
@@ -84,3 +88,38 @@ app.get("/api/data",(req,res)=>{
     res.send(users.filter(((user)=>user[filter].toLowerCase().includes(value))));
     
 })
+
+
+const product =[
+    {id:1, product_name: "Iphone 16"},
+    {id:1, product_name: "Iphone 17"},
+    {id:1, product_name: "Iphone 18"},
+    {id:1, product_name: "Iphone 19"}
+]
+
+
+app.get("/api/products",(req,res)=>{
+        res.status(200).send(product); 
+
+})
+
+
+// Post Requets 
+
+//1. Thunder Client instead using Postman it is VS Code Extension 
+
+
+app.post("/api/users",(req,res)=>{
+
+    // console.log(req.body);
+    // users.push(req.body)
+    // res.status(201).send(users); 
+
+      const {body}= req
+      const newUser={id:users[users.length-1].id+1, ...body};
+      users.push(newUser);
+       res.status(200).send(users);
+       
+});
+
+

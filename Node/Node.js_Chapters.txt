@@ -27,14 +27,17 @@ Chapters:
 3:03:52 - Express Apps
 3:20:27 - Middlewares
 3:40:19 - Route Params
-
-4:05:12 - Query Params
+-----------REV------------------ 
+4:05:12 - Query Params -check 
+-----------REV------------------  
 4:22:36 - Post Request
+ 
 4:38:37 - Put Request
 4:52:34 - Patch & Delete Request
 5:03:41 - getById Middleware II
 5:19:37 - Validation
 5:40:40 - Routes
+
 6:07:14 - Cookies
 6:25:55 - Sessions
 6:46:07 - Passport js
