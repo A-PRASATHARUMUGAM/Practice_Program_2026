@@ -1,12 +1,22 @@
 import express from "express";
 
+
 // After create the validationSchema 
 import { createUserValidationSchema } from "./utils/validationSchemas.mjs";
 import {validationResult,checkSchema,matchedData} from "express-validator"
-
+// UserRouter
+import userRoute from "./routes/users.mjs";
 
 // In this line mean create the express app
 const app = express();
+
+// Middleware-2 -> Incomeing request automatically to json type 
+
+app.use(express.json());
+
+
+// UserRoute Call this place  
+app.use(userRoute)
 
 // It is port Number in your browser 
 const PORT = 3000;
@@ -16,12 +26,6 @@ app.listen(PORT,()=>{
     console.log(`App is Running on Port ${PORT}`);
 });
 
-
-
-// Middleware-2 -> Incomeing request automatically to json type 
-
-app.use(express.json());
- 
 //Middleware -3 -> It is Global Middleware 
 const getUserIndexById = (req,res, next)=>{ 
 
@@ -42,14 +46,14 @@ const getUserIndexById = (req,res, next)=>{
 //Inside using callback name is request handler 
 
 // GET
-app.get("/", (req,res)=>{
+// app.get("/", (req,res)=>{
 
-      res.send({
-        name:"Prasath",
-        age:22
-      })
+//       res.send({
+//         name:"Prasath",
+//         age:22
+//       })
     
-})
+// })
 
 
 // User Data 
@@ -62,11 +66,11 @@ const users=[
 
 
 //Get All Users 
-app.get("/api/users",(req,res)=>{
+// app.get("/api/users",(req,res)=>{
 
-    res.status(200).send(users);
+//     res.status(200).send(users);
 
-})
+// })
 
 //Get ID to Users and Route Params 
 app.get("/api/users/:id",(req,res)=>{
@@ -230,7 +234,7 @@ const data = [
     {id:4, user_name: "Arun ", age:32, gender:"Male"}
 ]
 
-// New Post 
+// New Post for Validation and schema 
 
 app.get("/api/user",(req,res)=>{
 
