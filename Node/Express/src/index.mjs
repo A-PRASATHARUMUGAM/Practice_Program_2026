@@ -252,17 +252,14 @@ app.post("/api/user",
 
         }
     // console.log(req['express-validator#contexts']);
-    
+     
     data.push(matchedData(req))
     res.status(201).send(data); 
 
 
-    
-      
     //   const newUser={id:data[data.length-1].id+1, ...body};
     //   users.push(newUser);
     //   res.status(201).send(data);
        
-
 
 })
