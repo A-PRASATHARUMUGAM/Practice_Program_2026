@@ -12,7 +12,7 @@ app.listen(3000)
 //Morgan
 app.use(morgan('dev'));
 
-//Middleware 
+//Middleware - 1 
 app.use((req,res,next)=>{
     console.log('Request Recieved');
     console.log(req.host);

@@ -13,10 +13,27 @@ app.listen(PORT,()=>{
 
 
 
-// Middelware -> Incomeing request automatically to json type 
+// Middleware-2 -> Incomeing request automatically to json type 
 
 app.use(express.json());
  
+//Middleware -3 -> It is Global Middleware 
+const getUserIndexById = (req,res, next)=>{ 
+
+    const userId = parseInt(req.params.id);
+    if(isNaN(userId)){
+        return res.status(400).send({msg:"Bad Request"});   
+    }
+    const userIndex = users.findIndex((user)=>user.id === userId);
+
+    if(userIndex === -1 ){
+        return res.status(400).send({msg:"User Not Found"})
+    }
+    req.userIndex = userIndex;
+    next();
+} 
+
+
 //Inside using callback name is request handler 
 
 // GET
@@ -175,27 +192,27 @@ app.patch("/api/users/:id",(req,res)=> {
 
 
 // Delete Request 
+app.delete("/api/users/:id", getUserIndexById, (req,res)=>{
 
+    const userIndex = req.userIndex
 
-app.delete("/api/users/:id",(req,res)=>{
+    console.log(userIndex);
+    
+    // const userId=parseInt(req.params.id);
 
-    const userId=parseInt(req.params.id);
+    // if(isNaN(userId)){
 
-    if(isNaN(userId)){
+    //     res.status(400).send("Bad Request")
 
-        res.status(400).send("Bad Request")
+    // }
+    // const userIndex=users.findIndex((user)=>user.id === userId);
 
-    }
-    const userIndex=users.findIndex((user)=>user.id === userId);
-
-     if(userIndex === -1){
-            return res.status(404).send({msg:"User is not Found"})
-        }
+    //  if(userIndex === -1){
+    //         return res.status(404).send({msg:"User is not Found"})
+    //     }
 
     users.splice(userIndex,1);
     res.sendStatus(200)
-
-
 
 })
 
