@@ -1,0 +1,14 @@
+
+1. cookies it is stored the small junk of data stored. 
+2. Server -> Junk of data -> Browser -> +cookies -> Server 
+
+
+
+3. Cookie parser - it passed the cookies in JSON Format
+    - npm i cookie-parser
+
+
+
+Different Type of Cookies 
+1. cookies 
+2. signedCookies 

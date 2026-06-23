@@ -1,5 +1,5 @@
 import express from "express";
-
+import cookieParser from "cookie-parser";
 
 // After create the validationSchema 
 import { createUserValidationSchema } from "./utils/validationSchemas.mjs";
@@ -10,6 +10,7 @@ import userRoute from "./routes/users.mjs";
 // In this line mean create the express app
 const app = express();
 
+
 // Middleware-2 -> Incomeing request automatically to json type 
 
 app.use(express.json());
@@ -18,8 +19,12 @@ app.use(express.json());
 // UserRoute Call this place  
 app.use(userRoute)
 
+// Import the cookie Parser 
+app.use(cookieParser("Hello"));
+
 // It is port Number in your browser 
 const PORT = 3000;
+
 
 //It is Every Request going to Activated 
 app.listen(PORT,()=>{ 
@@ -46,14 +51,27 @@ const getUserIndexById = (req,res, next)=>{
 //Inside using callback name is request handler 
 
 // GET
-// app.get("/", (req,res)=>{
-
-//       res.send({
-//         name:"Prasath",
-//         age:22
-//       })
+app.get("/", (req,res)=>{
+    // Cookie names cannot contain spaces.
+    res.cookie("user","Admin",{maxAge: 60000 *60, signed:true});
+      res.send({
+        name:"Prasath",
+        age:22 
+      })
     
-// })
+})
+// GET for cookies 
+app.get("/cookies", (req,res)=>{
+    // console.log(req.headers.cookie);
+    console.log(req.signedCookies);  
+
+    if(req.signedCookies.user && req.signedCookies.user === "Admin"){
+       return res.send(data)
+    }else{
+        return res.send("it is not a Admin")
+    }
+
+})
 
 
 // User Data 
@@ -62,7 +80,7 @@ const users=[
     {id:2,name:"Vignesh"},
     {id:3,name:"Sabari"},
     {id:4,name:"Kandhan"}
-]
+] 
 
 
 //Get All Users 

@@ -36,10 +36,9 @@ Chapters:
 ------------IM------------------
 5:03:41 - getById Middleware II
 5:19:37 - Validation and Schemas 
-
 5:40:40 - Routes 
-
 6:07:14 - Cookies
+
 6:25:55 - Sessions
 6:46:07 - Passport js
 7:05:42 - Mongoose
