@@ -28,3 +28,16 @@
 
 8.Start Server -> npm run start:dev  
 
+
+
+
+
+----Create the Schema -----
+
+
+1.Express Validation 
+
+    - npm i express-validator   
+
+
+

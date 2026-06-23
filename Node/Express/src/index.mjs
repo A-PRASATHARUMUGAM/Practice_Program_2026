@@ -1,5 +1,10 @@
 import express from "express";
 
+// After create the validationSchema 
+import { createUserValidationSchema } from "./utils/validationSchemas.mjs";
+import {validationResult,checkSchema,matchedData} from "express-validator"
+
+
 // In this line mean create the express app
 const app = express();
 
@@ -7,7 +12,7 @@ const app = express();
 const PORT = 3000;
 
 //It is Every Request going to Activated 
-app.listen(PORT,()=>{
+app.listen(PORT,()=>{ 
     console.log(`App is Running on Port ${PORT}`);
 });
 
@@ -193,7 +198,7 @@ app.patch("/api/users/:id",(req,res)=> {
 
 // Delete Request 
 app.delete("/api/users/:id", getUserIndexById, (req,res)=>{
-
+    // Middleware - 3 
     const userIndex = req.userIndex
 
     console.log(userIndex);
@@ -217,3 +222,47 @@ app.delete("/api/users/:id", getUserIndexById, (req,res)=>{
 })
 
 
+
+const data = [  
+    {id:1 ,user_name: "prasath ", age:22, gender:"Male"},
+    {id:2, user_name: "vignesh ", age:39, gender:"Male"},
+    {id:3, user_name: "sabari ", age:35, gender:"Male"},
+    {id:4, user_name: "Arun ", age:32, gender:"Male"}
+]
+
+// New Post 
+
+app.get("/api/user",(req,res)=>{
+
+      res.status(200).send(data);
+})
+
+app.post("/api/user",
+    checkSchema(createUserValidationSchema),
+
+    (req,res)=>{
+
+        const result = validationResult(req);
+
+
+        console.log(result);
+
+        if(!result.isEmpty()){
+            return res.status(400).send({error:result.array()});
+
+        }
+    // console.log(req['express-validator#contexts']);
+    
+    data.push(matchedData(req))
+    res.status(201).send(data); 
+
+
+    
+      
+    //   const newUser={id:data[data.length-1].id+1, ...body};
+    //   users.push(newUser);
+    //   res.status(201).send(data);
+       
+
+
+})
