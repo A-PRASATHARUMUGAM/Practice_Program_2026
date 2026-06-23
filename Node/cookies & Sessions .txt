@@ -1,3 +1,4 @@
+-------- Cookies --------------
 
 1. cookies it is stored the small junk of data stored. 
 2. Server -> Junk of data -> Browser -> +cookies -> Server 
@@ -12,3 +13,13 @@
 Different Type of Cookies 
 1. cookies 
 2. signedCookies 
+
+
+
+--------- Sessions -------------
+
+1. session install 
+    - npm i express-session 
+
+
+

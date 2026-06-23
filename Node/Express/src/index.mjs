@@ -1,5 +1,6 @@
-import express from "express";
+import express, { request } from "express";
 import cookieParser from "cookie-parser";
+import session from 'express-session';
 
 // After create the validationSchema 
 import { createUserValidationSchema } from "./utils/validationSchemas.mjs";
@@ -21,6 +22,20 @@ app.use(userRoute)
 
 // Import the cookie Parser 
 app.use(cookieParser("Hello"));
+
+// Import session and user here 
+app.use(
+    session({
+        secret: "romba secret",
+        //it is value have in the page at the time stored other then not 
+        saveUninitialized:false, 
+        //it is not resave the data because multiple times you open and close the browser 
+        resave:false,
+        cookie:{
+            maxAge: 60000 * 60, 
+        }
+    }
+));
 
 // It is port Number in your browser 
 const PORT = 3000;
@@ -54,6 +69,15 @@ const getUserIndexById = (req,res, next)=>{
 app.get("/", (req,res)=>{
     // Cookie names cannot contain spaces.
     res.cookie("user","Admin",{maxAge: 60000 *60, signed:true});
+    // console.log(req.session);
+    console.log(req.session.id )
+    req.sessionStore.get(req.session.id,(err,sessionData)=>{
+        if(err){
+            console.log(err);
+        }else{
+            console.log(sessionData);
+        }
+    })
       res.send({
         name:"Prasath",
         age:22 
@@ -255,7 +279,9 @@ const data = [
 // New Post for Validation and schema 
 
 app.get("/api/user",(req,res)=>{
+     req.session.visited = true; 
 
+     console.log(req.session.id);
       res.status(200).send(data);
 })
 
