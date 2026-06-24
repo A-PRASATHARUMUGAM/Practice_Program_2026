@@ -2,11 +2,15 @@ import express, { request } from "express";
 import cookieParser from "cookie-parser";
 import session from 'express-session';
 
+// Passport js 
+import {Strategy as LocalStrategy} from "passport-local";
+
 // After create the validationSchema 
 import { createUserValidationSchema } from "./utils/validationSchemas.mjs";
 import {validationResult,checkSchema,matchedData} from "express-validator"
 // UserRouter
 import userRoute from "./routes/users.mjs";
+import passport from "passport";
 
 // In this line mean create the express app
 const app = express();
@@ -23,6 +27,28 @@ app.use(userRoute)
 // Import the cookie Parser 
 app.use(cookieParser("Hello"));
 
+
+// Passport js 
+app.use(passport.initialize());
+app.use(passport.session());
+
+passport.use(new LocalStrategy((cus_name, password, done)=>{
+
+    const customers= customer.find((cus)=>cus.cus_name === cus_name);
+
+    if(!user){
+        return done(null,false,{message:"Invalid Customer Name"});
+    }
+    if(user.password !== password){
+        return done(null, false,{message: "Incorrect Password"})
+    }
+    return done(null,user);
+
+
+}));
+
+
+
 // Import session and user here 
 app.use(
     session({
@@ -36,6 +62,10 @@ app.use(
         }
     }
 ));
+
+ 
+
+
 
 // It is port Number in your browser 
 const PORT = 3000;
@@ -309,5 +339,26 @@ app.post("/api/user",
     //   users.push(newUser);
     //   res.status(201).send(data);
        
+
+})
+
+
+
+// Passport js Implemented 
+
+const customer=[
+
+    {id:1, cus_name:"Prasath", age:"22",password:"123"},
+    {id:2, cus_name:"Vignesh", age:"39",password:"1234"},
+    {id:3, cus_name:"Sabari", age:"35",password:"12345"},
+    {id:4, cus_name:"Kandhan", age:"21",password:"123456"}
+]
+
+
+//  Get for Passport 
+
+app.post("/api/login",(req,res,next)=>{
+
+
 
 })

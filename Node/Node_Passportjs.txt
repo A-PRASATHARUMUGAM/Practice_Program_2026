@@ -1,0 +1,15 @@
+
+--- Passport Js -----------------
+
+1. It is using to Authenticate the user 
+
+- Install - 
+- npm i passport passport-local  
+
+
+
+2.
+Facebook login 
+Github login 
+Google login - OAuth 2.0 
+
