@@ -1,0 +1,7 @@
+        --- How to connect Node.js to MongoDb ---
+
+1. Install Mongoose (ORM) Object Relation Mapping 
+
+    - npm i mongoose
+
+    

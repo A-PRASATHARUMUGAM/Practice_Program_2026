@@ -2,6 +2,7 @@ import express, { request } from "express";
 import cookieParser from "cookie-parser";
 import session from 'express-session';
 
+
 // Passport js 
 import {Strategy as LocalStrategy} from "passport-local";
 
@@ -10,7 +11,12 @@ import { createUserValidationSchema } from "./utils/validationSchemas.mjs";
 import {validationResult,checkSchema,matchedData} from "express-validator"
 // UserRouter
 import userRoute from "./routes/users.mjs";
+// Passport js 
 import passport from "passport";
+
+// Mongoose 
+import mongoose from "mongoose";
+
 
 // In this line mean create the express app
 const app = express();
@@ -31,6 +37,12 @@ app.use(cookieParser("Hello"));
 // Passport js 
 app.use(passport.initialize());
 app.use(passport.session());
+
+
+// Mongoose -> Give below code is connect the Mongodb
+mongoose.connect('mongodb://localhost/express')
+.then(()=>console.log("DB Connected"))
+.catch((err)=>console.log(err));
 
 passport.use(new LocalStrategy((cus_name, password, done)=>{
 
@@ -362,3 +374,6 @@ app.post("/api/login",(req,res,next)=>{
 
 
 })
+
+
+//

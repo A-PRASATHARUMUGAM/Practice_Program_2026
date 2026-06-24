@@ -41,9 +41,9 @@ Chapters:
 6:25:55 - Sessions
 ------------IM------------------
 6:46:07 - Passport js
-
 7:05:42 - Mongoose
-7:36:52 - Password Encryption
+
+7:36:52 - Password Encryption / Hashing
 7:51:12 - OAuth 2.0 (Google Login)
 
 ---- General Topic ----
