@@ -42,7 +42,7 @@ Chapters:
 ------------IM------------------
 6:46:07 - Passport js
 7:05:42 - Mongoose
-
+-----------REV------------------
 7:36:52 - Password Encryption / Hashing
 7:51:12 - OAuth 2.0 (Google Login)
 
