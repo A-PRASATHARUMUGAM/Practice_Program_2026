@@ -1,0 +1,42 @@
+
+
+1. Install the Node Package 
+ - npm init -y 
+
+2. Install Express 
+- npm install express 
+
+3. Create the Git repository (Option but recommended)
+- git init 
+
+4. Create main.mjs file > import the express to your index file 
+
+    - Server Setup 
+
+            import express from 'express';
+
+            const app = express();
+            const port = 3000;
+
+            app.get('/', (req, res) => {
+                    res.send('Hello World!');
+            });
+
+            app.listen(port, () => {
+                    console.log(`Example app listening on port ${port}`);
+            });
+
+
+5. Implement the Module 
+    
+    - 1. package.json >  "type": "commonjs" ->  "type":"module" -> Because Using ESC Module require instead using Import 
+
+4. package.json >  "main":"index.js" -> "main":"index.mjs"
+
+5. package.json > scripts > "start:dev":"nodemon ./src/index.mjs"  -> Automatically Run Node.js 
+
+6. package.json > scripts > "start":"node ./src/index.mjs"   -> Which File to start 
+
+
+
+8.Start Server -> npm run start:dev  
