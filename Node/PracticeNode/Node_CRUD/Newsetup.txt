@@ -1,0 +1,4 @@
+
+
+1. Install the Node Package 
+ - npm init -y 
