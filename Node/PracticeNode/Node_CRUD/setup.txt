@@ -1,0 +1,61 @@
+
+ --- NPM Require Dependencies ---
+
+1. nodemon - nodemon is a tool that helps develop Node.js based applications by automatically restarting the node application when file changes in the directory are detected.
+2. lodash  -  It is create a package.json and Dependencies
+3. morgan - Third Party Middleware 
+4. 
+
+//Setup 
+
+1. Install Express - npm install Express
+2. Create file App.js > 
+        - const exc = require('express')
+        - const app= express() 
+        - app.listen(3000)
+3.      
+     
+     
+                -- Topic: Route Parameters --
+
+
+
+--- Setup For Create Express App --- 
+
+
+1. npm init -y  -> It is give the package.json File 
+2. npm i express -> Install the express 
+3. package.json >  "type": "commonjs" ->  "type":"module" -> Because Using ESC Module require instead using Import 
+4. package.json >  "main":"index.js" -> "main":"index.mjs"
+5. package.json > scripts > "start:dev":"nodemon ./src/index.mjs"
+6. package.json > scripts > "start":"node ./src/index.mjs"
+7. Basic Server Setup 
+
+                - import express from "express";
+
+                // In this line mean create the express app
+                const app = express();
+
+                // It is port Number in your browser 
+                const PORT = 3000;
+
+                //It is Every Request going to Activated 
+                app.listen(PORT,()=>{
+                    console.log(`App is Running on Port ${PORT}`);
+                });
+
+8.Start Server -> npm run start:dev  
+
+
+
+
+
+----Create the Schema -----
+
+
+1.Express Validation 
+
+    - npm i express-validator   
+
+
+
