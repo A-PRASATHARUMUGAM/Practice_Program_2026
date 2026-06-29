@@ -10,7 +10,7 @@ const router = express.Router();
 
                     //  --- CRUD Operation ----
 
-// R - Reading - GET 
+// R - Reading - GET    
 router.get("/", usersGet );
 
 
