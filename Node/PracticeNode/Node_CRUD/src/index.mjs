@@ -1,8 +1,12 @@
 import express from "express";
 import usersroute from "./routes/user.routes.mjs";
+import connectDB from "./config/db.mjs";
 
 const app = express()
 const PORT= 3000;
+
+//Connect DB 
+connectDB();
 
 app.listen(PORT,()=>{
 

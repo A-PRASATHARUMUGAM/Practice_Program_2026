@@ -120,3 +120,15 @@ src/
 
         - 1. Thunder Client - It is like Postman and Light Weight Vs Code Extension
 
+
+
+ -- MongoDB Connect Process --
+
+
+ 1.npm i install mongodb 
+
+ 2.npm i install mongoose 
+
+ 3.Hide Confidentials to using .env
+
+ 4.npm install dotenv   
