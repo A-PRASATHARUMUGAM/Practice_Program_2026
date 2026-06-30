@@ -71,7 +71,7 @@
 
                     -5. Start Server -> npm run start:dev  
                     
-11. MVC Patten Check Project Structure Backend
+11. (MVC) Patten Check Project Structure Backend and  Check (REPO) - Repository Pattern also  
 
 src/
 │

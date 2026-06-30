@@ -79,7 +79,7 @@ export const usersPut = async (req, res) => {
             req.body,
             {
                 new: true,          // Return updated document
-                runValidators: true // Apply schema validation
+                runValidators: true // Apply schema vali dation
             }
         );
 
