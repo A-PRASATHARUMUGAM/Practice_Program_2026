@@ -5,6 +5,14 @@ import connectDB from "./config/db.mjs";
 const app = express()
 const PORT= 3000;
 
+
+// Json Data Understanding Middleware - 2 
+app.use(express.json());
+
+// Json Data Understanding for From Middleware - 3
+app.use(express.urlencoded({extended:true}));
+
+
 //Connect DB 
 connectDB();
 
@@ -18,6 +26,7 @@ app.listen(PORT,()=>{
 
 // UsersRoutes
 app.use("/users",usersroute); 
+
 
 
 // Home Route 

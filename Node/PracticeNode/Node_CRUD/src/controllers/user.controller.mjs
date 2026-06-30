@@ -10,8 +10,10 @@ export const usersGet = (req,res) =>{
 // POST Controller
 export const usersPost = (req,res)=>{
 
-    res.send(" Creating POST");
-     
+    console.log(req.body);
+    return res.send(req.body); 
+    
+
 };
 
 

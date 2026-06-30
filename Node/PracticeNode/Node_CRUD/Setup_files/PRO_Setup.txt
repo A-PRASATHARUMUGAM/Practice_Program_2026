@@ -132,3 +132,10 @@ src/
  3.Hide Confidentials to using .env
 
  4.npm install dotenv   
+
+ 5.config to db.mjs file 
+
+ 6.create .env.example for Developer understand
+
+
+
