@@ -10,7 +10,7 @@
 
     Data Base
         - connectDB()
-        - .env and .env.example 
+        - .env and .env.example     
 
         
 

@@ -75,7 +75,7 @@
 
 src/
 │
-├── models/                 -> Which Data is allowed to store DB 
+├── models/                 -> (Create a Schema) Which Data is allowed to store DB  
 │      User.js
 │
 ├── controllers/            -> Route > Logic / Function 
@@ -90,7 +90,7 @@ src/
 ├── middleware/             -> Middleware Rules
 │      authMiddleware.js
 │
-├── config/                 ->            
+├── config/                 -> Connect the DB Process and config .env and .env.example       
 │      db.js
 │
 ├── app.js
