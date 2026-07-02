@@ -16,6 +16,6 @@
    My SQL Server - SSMS
    Oracle 
    PostgreSQL 
+7. It is not case sensitive 
 
-7. Prefered WAMP Server
-8. 
+8. Prefered WAMP Server

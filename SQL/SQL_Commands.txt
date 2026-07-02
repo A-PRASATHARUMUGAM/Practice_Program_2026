@@ -1,0 +1,97 @@
+                                -- SQL - Commands --
+
+1. Show the All DataBase 
+
+    - show databases;   
+
+
+2. Create DataBase
+
+    - CREATE DATABASE database_name;
+
+
+3. Use the DB which DB you want 
+
+    - use database_name; 
+
+
+4.  Drop Database / Delete the Data Base
+
+    - DROP DATABASE database_name;
+
+
+5. ALTER DATABASE - Read only in the DataBase you can't about to DROP DB 
+
+    Read Only: ON
+            - ALTER DATABASE read only = 1; 
+
+    Read Only: OFF
+
+             - ALTER DATABASE read only = 0;  
+
+
+6. DB > Create Table & Data Types 
+
+            - CREATE TABLE table_name(column_name datatype);
+
+    Ex: 
+            create table stores(
+                product_id int, 
+                product_name varchar(250),
+                product_price decimal(10,2),
+                uploaded_date date
+            );
+
+
+7. Show the all Record for Table 
+
+            - SELECT * FROM table_name;
+
+
+8. Rename Tables 
+
+            - RENAME table old_table_name to new_table_name 
+
+9. Drop Table 
+
+            - DROP TABLE table_name;
+
+
+10. ALTER TABLE - Add the Extra column_name
+
+            - ALTER TABLE table_name;
+            - Add column_name;
+
+    Ex:
+
+            ALTER TABLE stores 
+            ADD product_qnt varchar(10);
+
+
+11. Rename the table Column Name 
+
+            - ALTER TABLE table_name;
+            - RENAME COLUMN old_column_name to new_column_name
+
+
+12. Modify the table column Name datatype 
+
+            - ALTER TABLE table_name
+            - MODIFY COLUMN column_name varchar(255)
+
+    - If you want to Move - 
+
+            - first; - Move the column first 
+            - after product_price - Move to after productprice 
+
+13. Modify the table column Name datatype and move where you want
+
+
+   - ALTER TABLE table_name
+            - MODIFY COLUMN column_name varchar(255)
+
+    - If you want to Move - 
+
+            - first; - Move the column first 
+            - after product_price - Move to after productprice 
+
