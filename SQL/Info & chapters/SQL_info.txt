@@ -1,0 +1,21 @@
+                        --- SQL - Structured Query Lanaguage ---
+
+1. SQL - Structured Query Lanaguage
+2. It is using for CRUD Operation 
+3. CRUD - CREATE, READ, UPDATE, DELETE 
+4. DBMS - Data Base Management System 
+
+5. Data Base Type  
+    1- Relation DataBase 
+            EX: SQL - Tabel fromat 
+
+    2- Non Relation DataBase (NoSQL)
+            EX: MongoDb - json fromat,Graph
+
+6. My SQL - Now Learning 
+   My SQL Server - SSMS
+   Oracle 
+   PostgreSQL 
+
+7. Prefered WAMP Server
+8. 

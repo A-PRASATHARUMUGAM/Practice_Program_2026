@@ -1,0 +1,40 @@
+   --- SQL - Structured Query Lanaguage Chapters---
+
+
+- Chapters -
+
+0:00:00 - Introduction to DBMS & SQL 
+0:10:07 - Environment Setup
+
+0:17:22 - Create Database
+0:24:05 - Drop Database
+0:25:30 - Alter Database
+0:28:00 - Create Table & Data Types
+0:33:59 - Rename Tables
+0:36:07 - Alter Table
+0:44:02 - Insert Rows
+0:56:25 - Select Query & Where
+1:08:41 - Update Query
+1:18:29 - Delete Query
+1:21:46 - RollBack
+1:31:20 - Constraints
+2:00:11 - Primary Keys & Auto increment
+2:18:07 - Foreign Keys
+2:40:45 - Joins
+3:00:34 - Functions
+3:10:01 - Logical Operators
+3:26:38 - Wild Card Characters
+3:42:40 - Order By & Limit
+3:55:57 - Union & Union All
+4:12:34 - Self Joins
+4:26:46 - Views
+4:40:12 - Indexes
+4:57:03 - Sub Queries
+5:10:53 - Group By & Having
+5:23:42 - Window Functions
+5:38:55 - On Delete
+5:52:52 - Stored Procedure
+6:07:32 - LeetCode Practice Problems
+6:31:57 - Triggers in SQL
+6:48:14 - Normalization
+7:32:41 - ER Diagram 
