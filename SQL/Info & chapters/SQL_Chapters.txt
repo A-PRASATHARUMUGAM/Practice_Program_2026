@@ -5,13 +5,12 @@
 
 0:00:00 - Introduction to DBMS & SQL 
 0:10:07 - Environment Setup
------------------------------------
+------------------------------------
 0:17:22 - Create Database * 
 0:24:05 - Drop Database *
 0:25:30 - Alter Database -
 0:28:00 - Create Table & Data Types *
 0:33:59 - Rename Tables
-
 0:36:07 - Alter Table * 
 
 0:44:02 - Insert Rows *

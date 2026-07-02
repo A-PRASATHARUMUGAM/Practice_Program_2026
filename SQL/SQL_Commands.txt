@@ -87,7 +87,7 @@
 13. Modify the table column Name datatype and move where you want
 
 
-   - ALTER TABLE table_name
+    - ALTER TABLE table_name
             - MODIFY COLUMN column_name varchar(255)
 
     - If you want to Move - 
@@ -95,3 +95,12 @@
             - first; - Move the column first 
             - after product_price - Move to after productprice 
 
+
+14. Remove the specifice column_name
+
+        
+    - ALTER TABLE table_name
+    - DROP COLUMN column_name
+
+
+15. 
