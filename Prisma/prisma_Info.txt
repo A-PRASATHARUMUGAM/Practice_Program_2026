@@ -1,7 +1,0 @@
---- Prisma --- 
-
-1. ORM - Object Relationship Map  / Data Base Tool Kit 
-
-2. Without Query to Write easly  
-
-3. 

@@ -1,0 +1,7 @@
+                                --- Prisma ---
+
+1. npm init -y 
+2. TypeScript - npm install typescript ts-node @type/node -D (Check - DevDependences)
+3. 
+
+
