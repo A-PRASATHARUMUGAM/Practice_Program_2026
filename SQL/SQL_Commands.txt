@@ -155,26 +155,52 @@
 
             Select product_id, product_name as product_list from stores;
 
-19. Find/Show the Specific Column Base on Values. 
+19. Find/Show the Specific Column Base on Values. (Condition to find the data)
 
 
         Syntax:
 
-            SELECT * from table_name where column_name = id/Values
+            SELECT * from table_name where column_name = id/names/value
 
+        Ex:   (Not Equal, Names, Value)
+
+            Select * from stores where product_id = 4 ;
+                        (OR)
+            Select * from stores where product_id != 4 ;
+                        (OR)
+            Select product_id, product_name from stores  where product_id != 4;
+                        (OR)
+            Select * from stores where product_price > 1000;
+                        (OR)
+            Select * from stores where uploaded_date is null;
+                         (OR)
+            Select * from stores where uploaded_date is not null;
+
+20. UPDATE Rows all/Specific
+
+         Syntax:
+
+            UPDATE table_name 
+            set column_name = "value"
+            where which_id = id
 
         Ex:
 
-            Select * from stores where product_id = 4 ;
+            UPDATE stores
+            set uploaded_date = "2026-07-04",
+            set product_name = "Power Cable ",
+            set product_price = null
+            where product_id = 6 
 
+21. DELETE Rows all/ Specific (Important)
 
-20. 
+        Syntax
 
-
-
-
-
-
-
+             DELETE from table_name;  -> It is Delete all data 
+             Where which_id = id
             
+        Ex: 
+
+            DELETE from stores
+            where product_id = 6 
 
