@@ -97,10 +97,29 @@
 
 
 14. Remove the specifice column_name
-
         
     - ALTER TABLE table_name
     - DROP COLUMN column_name
 
 
-15. 
+15. Insert Rows Single / Multiple  
+
+
+    INSERT INTO table_name
+    VALUES(product_id, product_name, product_price, uploaded_date);
+
+
+    Ex:
+        INSERT INTO stores
+        VALUES(1, "Computer", 2000, "2026-07-03"),
+                (2, "Keybaord", 1000, "2026-07-03"),
+                (3, "Mouse", 500, "2026-07-03"),
+                (4, "Monitor", 4000, "2026-07-03"),
+                (5, "Pendrive", 600, "2026-07-03");
+
+
+16. 
+
+
+
+

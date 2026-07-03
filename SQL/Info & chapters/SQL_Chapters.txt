@@ -12,6 +12,7 @@
 0:28:00 - Create Table & Data Types *
 0:33:59 - Rename Tables
 0:36:07 - Alter Table * 
+---- Until Practice the Queries ----
 
 0:44:02 - Insert Rows *
 0:56:25 - Select Query & Where *
@@ -43,3 +44,7 @@
 6:31:57 - Triggers in SQL   -
 6:48:14 - Normalization
 7:32:41 - ER Diagram 
+
+
+
+
