@@ -16,8 +16,9 @@
 1:08:41 - Update Query *
 1:18:29 - Delete Query *
 ---- Until Practice the Queries ----
-
 1:21:46 - RollBack
+
+
 1:31:20 - Constraints *
 2:00:11 - Primary Keys & Auto increment *
 2:18:07 - Foreign Keys *

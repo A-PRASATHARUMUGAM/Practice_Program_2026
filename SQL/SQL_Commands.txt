@@ -194,13 +194,34 @@
 
 21. DELETE Rows all/ Specific (Important)
 
-        Syntax
+        Syntax:
 
-             DELETE from table_name;  -> It is Delete all data 
-             Where which_id = id
+            DELETE from table_name;  -> It is Delete all data 
+            Where which_id = id
             
         Ex: 
 
             DELETE from stores
             where product_id = 6 
 
+22. Auto commit off -> It is turn off the Auto Save Concept is off
+
+        Syntax:
+
+            SET AUTOCOMMIT = 0 
+
+            commit -> Once you commit You can't about to RollBack
+
+            RollBack -> If you do wrong changes you rollback to get it "!Before commit is Important" 
+
+23. Date and Time 
+
+        Syntax:
+
+            create table timestaps(
+                doj date,
+                dateandTime datetime,
+                Time time
+            );
+
+ 
