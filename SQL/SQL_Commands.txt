@@ -96,17 +96,18 @@
             - after product_price - Move to after productprice 
 
 
-14. Remove the specifice column_name
+14. Remove the Specific column_name
         
     - ALTER TABLE table_name
     - DROP COLUMN column_name
 
 
-15. Insert Rows Single / Multiple  
+15. Insert Rows - Single / Multiple  
 
+    Syntax:
 
-    INSERT INTO table_name
-    VALUES(product_id, product_name, product_price, uploaded_date);
+        INSERT INTO table_name
+        VALUES(product_id, product_name, product_price, uploaded_date);
 
 
     Ex:
@@ -118,8 +119,62 @@
                 (5, "Pendrive", 600, "2026-07-03");
 
 
-16. 
+16. Insert Specific Rows only 
+
+    Syntax: 
+        
+        INSERT INTO table_name (product_name, product_price)
+        VALUES("Computer", 2000,);
+
+    Ex:
+
+        INSERT INTO stores (product_name, product_price)
+        VALUES("Computer", 2000);
+               
+
+17. Find/Show the Specific Column
+
+        Syntax:
+
+            SELECT column_name1, column_name...n from table_name;
+
+        
+        Ex:
+
+            Select product_id, product_name from stores;
+
+
+18. Find/Show the Specific Column name as alise name
+
+       Syntax:
+
+            SELECT column_name1 as alise_name from table_name;
+
+        
+        Ex:
+
+            Select product_id, product_name as product_list from stores;
+
+19. Find/Show the Specific Column Base on Values. 
+
+
+        Syntax:
+
+            SELECT * from table_name where column_name = id/Values
+
+
+        Ex:
+
+            Select * from stores where product_id = 4 ;
+
+
+20. 
 
 
 
+
+
+
+
+            
 
