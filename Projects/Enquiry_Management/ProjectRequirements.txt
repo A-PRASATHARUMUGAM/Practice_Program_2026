@@ -1,0 +1,108 @@
+                                                 -- Full Stack Enquire Management Project  --
+
+-- Frontend --
+HTML 
+CSS - Tailwind CSS
+JavaScript
+React.js 
+
+-- Backend -- 
+Node.js 
+Express.js 
+Prisma 
+MySQL
+
+
+ ** Frontend Modules**
+
+1. Role Based Authentication (JWT)
+
+       - Login (Seeded Admin Default Credentials)
+       - Register 
+       
+- Role Based -
+       - Admin 
+              - Dashboard
+              - Enquire
+              - User Management 
+                     - Create Users
+                     - Approve Users
+                     - Edit Users 
+                     - Delete Users
+              - Profile (Admin Profile)
+
+       - User
+              - Dashboard
+              - Enquire
+              - Profile(User Profile)
+		
+2. Dashboard 
+
+	1. Enquires Count Cards 
+		- Total Enquires 	
+		- Pending Enquires 
+		- Completed Enquires 
+		- Connect Enquires 
+		
+	2. Pie Chart (Later)
+	3. Show top 10 Enquires lists and (View All Button) 
+
+3. Enquires
+
+       - Name 
+       - Mobile Number 
+       - Email ID 
+       - Gender
+       - Reason For Enquire 
+       - Date of Enquire
+       - Status (Pending, Completed, Connect, Failed)
+       - Button (View, Edit, Delete)
+
+4. Profile 
+       - Admin 
+              - Change Username 
+              - Change Email
+              - Change Password
+              - Change Mobile Number
+                     
+       - User(View Only)
+              -  Username 
+              -  Email 
+              -  Password
+              -  Mobile Number
+
+	
+** Backend Tables**			
+
+Authentication 
+              - Username
+              - Email ID
+              - Password
+              - Mobile Number 
+
+Enquire 
+       Create Users (CRUD)
+              - Name 
+              - Mobile Number 
+              - Email ID 
+              - Gender
+              - Reason For Enquire 
+              - Date of Enquire
+              - Status (Pending, Completed, Connect, Failed)
+              
+       Enquires Count Cards 
+              - Total Enquires 	
+              - Pending Enquires 
+              - Completed Enquires 
+              - Connect Enquires 
+                            
+ 
+ -- Collected Full Requirment Successfully  --
+
+			
+				
+
+
+		
+		
+		
