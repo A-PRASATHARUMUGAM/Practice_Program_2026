@@ -6,7 +6,7 @@ function Navbar() {
 
     return (
         <>
-            <nav className=" text-white border flex flex-col">
+            <nav className="  border flex flex-col">
 
                 <a href="#">Dashboard</a>
                 <a href="#">Enquires</a>

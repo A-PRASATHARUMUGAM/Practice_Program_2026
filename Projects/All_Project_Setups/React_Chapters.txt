@@ -6,18 +6,18 @@
 00:06:00 - React vs React Native
 00:08:18 - Presence of React
 -----------------------------------------------
-00:09:09 - Components (Reusable,Self-Contained)
+00:09:09 - Components (Reusable, Self-Contained)
 00:10:31 - Virtual Dom
 00:12:18 - Single Page Application (SPA)
 00:14:19 - Pre-requisites 
 00:15:54 - Environment Setup
 00:17:02 - Create your First React App
 00:26:48 - Project Structure 
-
-
 00:34:17 - Create a React Component
 00:57:45 - Styles in React
+
 01:10:20 - Props in React
+
 01:33:40 - Conditional Rendering
 01:48:53 - Map (Dynamic Content)
 02:08:08 - Key Attribute for Components
@@ -29,6 +29,7 @@
 03:29:34 - Use Effect Hook
 03:56:03 - Fetch API Data 
 04:26:12 - Error Handling
+---------------------------------------
 04:50:08 - Custom Hooks in React
 05:05:14 - OnChange Event Handling
 05:42:23 - React Router
