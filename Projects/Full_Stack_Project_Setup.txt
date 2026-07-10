@@ -26,8 +26,6 @@ Install dependencies:
     - npm install tailwindcss @tailwindcss/vite
 
 
-
-
 ** Step 3: Configure Vite **
 
     - Open vite.config.js
