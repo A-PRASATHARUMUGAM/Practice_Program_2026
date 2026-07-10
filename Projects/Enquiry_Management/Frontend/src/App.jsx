@@ -1,25 +1,13 @@
 import { useState } from 'react'
+import Navbar from './components/Navbar'
 
 function App() {
   return (
     <>
-
-    {/* Main Container */}
-
-    <div className="">
-
-
-      <h1 className="text-white bg-green-400 font-medium">
-
-             The Frontend Setup is Completed
-
-      </h1>
-
-
-          
-    </div>
+      <Navbar/>
     </>
   )
 } 
 
 export default App
+ 

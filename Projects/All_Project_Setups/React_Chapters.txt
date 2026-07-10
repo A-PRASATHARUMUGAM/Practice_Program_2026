@@ -1,0 +1,57 @@
+ --- Time Stamps ---
+00:00:00 - Introduction
+00:00:20 - What is React ?
+00:01:44 - Library vs Framework
+00:04:33 - History of react
+00:06:00 - React vs React Native
+00:08:18 - Presence of React
+-----------------------------------------------
+00:09:09 - Components (Reusable,Self-Contained)
+00:10:31 - Virtual Dom
+00:12:18 - Single Page Application (SPA)
+00:14:19 - Pre-requisites 
+00:15:54 - Environment Setup
+00:17:02 - Create your First React App
+00:26:48 - Project Structure 
+
+
+00:34:17 - Create a React Component
+00:57:45 - Styles in React
+01:10:20 - Props in React
+01:33:40 - Conditional Rendering
+01:48:53 - Map (Dynamic Content)
+02:08:08 - Key Attribute for Components
+02:13:52 - Handling Missing Data
+02:17:30 - Sorting & Filtering
+02:26:49 - Click Events Handling
+02:44:57 - Use State Hook
+03:12:21 - Methods as Props
+03:29:34 - Use Effect Hook
+03:56:03 - Fetch API Data 
+04:26:12 - Error Handling
+04:50:08 - Custom Hooks in React
+05:05:14 - OnChange Event Handling
+05:42:23 - React Router
+06:04:35 - Clean Up & Updater Function
+06:33:17 - Use Context Hook
+06:50:31 - Use Ref Hook
+07:06:07 - Dynamic Path (params)
+07:27:35 - Component Life Cycle 
+
+07:46:14 - Instagram Clone -1 NavBar
+08:16:57 - Instagram Clone -2 Posts Feed
+08:49:44 - Instagram Clone -3 Suggestions
+09:12:24 - Instagram Clone -4 Stories
+10:00:29 - Instagram Clone -5 Profile (CRUD Operations)
+
+
+- Notes -
+
+Next.js 
+TypeScript
+
+What is the difference between React + Js / React + Ts
+Single Page Application (SPA)
+    - Without Reloading Page 
+    - Using Reusable components 
+
