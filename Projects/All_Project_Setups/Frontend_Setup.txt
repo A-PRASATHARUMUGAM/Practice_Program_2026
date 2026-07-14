@@ -1,0 +1,135 @@
+1. Tailwind CSS in React + Vite (Recommended)
+
+
+** Step 1: Create a Vite project **
+
+    - npm create vite@latest my-project
+
+Choose:
+
+    - React
+    - JavaScript
+
+Move into the project:
+
+    - cd my-project
+
+Install dependencies:
+
+    - npm install
+
+
+
+
+** Step 2: Install Tailwind CSS **
+
+    - npm install tailwindcss @tailwindcss/vite
+
+
+** Step 3: Configure Vite **
+
+    - Open vite.config.js
+
+
+            import { defineConfig } from 'vite'
+            import react from '@vitejs/plugin-react'
+            import tailwindcss from '@tailwindcss/vite'
+
+            export default defineConfig({
+            plugins: [
+                react(),
+                tailwindcss(),
+            ],
+            })
+
+
+** Step 4: Import Tailwind **
+    
+Open
+
+    - src/index.css
+
+Replace everything with:
+
+    - @import "tailwindcss";
+
+
+
+
+
+** Step 5: Import CSS **
+
+In
+
+    - src/main.jsx
+
+    - import './index.css'
+
+
+
+** Step 6: Start the project **
+
+
+    - npm run dev
+
+
+
+** Step 7: Test **
+
+function App() {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-blue-500">
+      <h1 className="text-5xl font-bold text-white">
+
+        Tailwind CSS Works!
+
+      </h1>
+
+    </div>
+  );
+}
+
+export default App;
+
+
+
+** Project Structure (React + Vite) **
+
+
+
+            my-project/
+            │
+            ├── node_modules/
+            ├── public/
+            ├── src/
+            │   ├── App.jsx
+            │   ├── index.css
+            │   └── main.jsx
+            ├── package.json
+            └── vite.config.js
+
+
+
+
+2. Tailwind CSS in Plain HTML (CLI Method Without Node.js to Use)
+
+Install
+    - npm install tailwindcss @tailwindcss/cli
+
+Create:
+
+    - src/input.css
+    - @import "tailwindcss";
+
+Run:
+
+    - npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch
+
+Link it in your HTML:
+
+    <link rel="stylesheet" href="./dist/output.css">
+
+    Example
+    <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+        Click Me
+    </button>
