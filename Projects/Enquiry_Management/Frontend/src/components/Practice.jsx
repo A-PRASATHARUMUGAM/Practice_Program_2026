@@ -1,5 +1,6 @@
 import React from 'react'
 import HTML from "../assets/tour2.jpg"
+// import proptypes from "prop-types";
 
 const Practice = (props) => {
 
@@ -75,5 +76,8 @@ const Practice = (props) => {
 //   image:HTML,
 // })
 
+// Practice.proptypes ={
+//   show:proptypes.bool,
+// }
       
 export default Practice
