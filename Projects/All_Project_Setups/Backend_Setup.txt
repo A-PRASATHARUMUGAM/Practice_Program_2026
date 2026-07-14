@@ -1,0 +1,81 @@
+
+-- Backend Project Structure --
+
+📁 Backend (Node.js + Express + Prisma + MySQL)
+
+Repository Pattern (REP) + Service Layer (Recommended)
+
+
+backend/
+│
+├── src/
+│
+│   ├── config/
+│   │   ├── db.js
+│   │   └── env.js
+│   │
+│   ├── models/
+│   │   ├── User.js
+│   │   └── Product.js
+│   │
+│   ├── controllers/
+│   │   ├── authController.js
+│   │   ├── userController.js
+│   │   └── productController.js
+│   │
+│   ├── routes/
+│   │   ├── authRoutes.js
+│   │   ├── userRoutes.js
+│   │   └── productRoutes.js
+│   │
+│   ├── middleware/
+│   │   ├── authMiddleware.js
+│   │   ├── errorMiddleware.js
+│   │   └── uploadMiddleware.js
+│   │
+│   ├── services/
+│   │   ├── authService.js
+│   │   ├── userService.js
+│   │   └── productService.js
+│   │
+│   ├── utils/
+│   │   ├── generateToken.js
+│   │   ├── logger.js
+│   │   └── validators.js
+│   │
+│   ├── validations/
+│   │   ├── authValidation.js
+│   │   └── productValidation.js
+│   │
+│   ├── uploads/
+│   │
+│   ├── app.js
+│   └── server.js
+│
+├── .env
+├── package.json
+└── nodemon.json
+
+
+
+Client
+   │
+   ▼
+Routes
+   │
+   ▼
+Controller
+   │
+   ▼
+Service
+   │
+   ▼
+Repository
+   │
+   ▼
+Prisma
+   │
+   ▼
+MySQL
+
+

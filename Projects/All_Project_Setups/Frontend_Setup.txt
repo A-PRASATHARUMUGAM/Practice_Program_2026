@@ -133,3 +133,75 @@ Link it in your HTML:
     <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
         Click Me
     </button>
+
+
+
+                       
+-- Frontend Project Structure --
+
+     
+📁 Frontend (React)
+
+frontend/
+│
+├── public/
+│   ├── favicon.ico
+│   ├── index.html
+│   └── images/
+│
+├── src/
+│
+│   ├── assets/
+│   │   ├── images/
+│   │   ├── icons/
+│   │   └── fonts/
+│   │
+│   ├── components/
+│   │   ├── Button/
+│   │   ├── Navbar/
+│   │   ├── Footer/
+│   │   ├── Card/
+│   │   └── Loader/
+│   │
+│   ├── pages/
+│   │   ├── Home/
+│   │   ├── Login/
+│   │   ├── Register/
+│   │   ├── Dashboard/
+│   │   └── Profile/
+│   │
+│   ├── layouts/
+│   │   ├── MainLayout.jsx
+│   │   └── AuthLayout.jsx
+│   │
+│   ├── hooks/
+│   │   ├── useAuth.js
+│   │   └── useFetch.js
+│   │
+│   ├── context/
+│   │   └── AuthContext.jsx
+│   │
+│   ├── services/
+│   │   ├── api.js
+│   │   ├── authService.js
+│   │   └── userService.js
+│   │
+│   ├── utils/
+│   │   ├── helper.js
+│   │   ├── validator.js
+│   │   └── constants.js
+│   │
+│   ├── routes/
+│   │   └── AppRoutes.jsx
+│   │
+│   ├── styles/
+│   │   ├── global.css
+│   │   └── variables.css
+│   │
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+│
+├── .env
+├── package.json
+└── vite.config.js
