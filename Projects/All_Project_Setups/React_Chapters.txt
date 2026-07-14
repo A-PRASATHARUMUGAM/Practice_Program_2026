@@ -15,10 +15,10 @@
 00:26:48 - Project Structure 
 00:34:17 - Create a React Component
 00:57:45 - Styles in React
-
 01:10:20 - Props in React
 
 01:33:40 - Conditional Rendering
+
 01:48:53 - Map (Dynamic Content)
 02:08:08 - Key Attribute for Components
 02:13:52 - Handling Missing Data

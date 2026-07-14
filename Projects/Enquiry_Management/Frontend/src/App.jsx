@@ -8,13 +8,13 @@ function App() {
   return (
     <>
       <Navbar/>
-      <Practice name="HTML" price="This HTML Price : $500" image={HTML}/>
-      <Practice name="HTML" price="This HTML Price : $500" image={HTML}/>
-      <Practice name="HTML"  />
+      <Practice name="HTML" show={true} rating="5 Start" price="This HTML Price : $500" image={HTML}/>
+      <Practice name="Java" show={false} rating="5 Start" price="This jave  Price : $500" image={HTML}/>
+  
       
     </>
   )
 } 
-
+ 
 export default App
  
