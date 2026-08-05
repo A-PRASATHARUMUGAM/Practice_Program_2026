@@ -1,24 +1,44 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
+import Counter from './components/Counter';
+import { Counter2 } from './components/Counter2';
+import ShowingData from './components/ShowingData';
 
 function App() {
 
 
+
   return (
     <>
-      <div className="min-h-screen flex items-center justify-center bg-blue-500">
-      <h1 className="text-5xl font-bold text-white">
-
-        Tailwind CSS Works!
-
-      </h1>
-
-    </div>
+      {/* <Counter /> */}
+      {/* <Counter2 /> */}
+      <ShowingData />
+     
     </>
   )
 }
 
+
+
 export default App
+
+
+// 1. React Hooks 
+ 
+//      - Basic Hooks
+// useState
+// useEffect
+// useRef
+// useContext
+
+//     - Intermediate Hooks
+// useMemo
+// useCallback
+// useReducer
+
+//      - Advanced Hooks
+// Custom Hooks
+// useImperativeHandle
+// useLayoutEffect
+// useId
+
