@@ -19,8 +19,6 @@ Install dependencies:
     - npm install
 
 
-
-
 ** Step 2: Install Tailwind CSS **
 
     - npm install tailwindcss @tailwindcss/vite
